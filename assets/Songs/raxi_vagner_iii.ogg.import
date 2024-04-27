@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/raxi_vagner_iii.ogg-2aa6881a37ed14ecd4ccc51d3974ce5f.oggstr"
+
+[deps]
+
+source_file="res://assets/Songs/raxi_vagner_iii.ogg"
+dest_files=[ "res://.import/raxi_vagner_iii.ogg-2aa6881a37ed14ecd4ccc51d3974ce5f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

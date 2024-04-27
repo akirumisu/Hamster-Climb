@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Next_to_You.ogg-9eee6080022da31e617c461aabec0454.oggstr"
+
+[deps]
+
+source_file="res://assets/Songs/Next_to_You.ogg"
+dest_files=[ "res://.import/Next_to_You.ogg-9eee6080022da31e617c461aabec0454.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

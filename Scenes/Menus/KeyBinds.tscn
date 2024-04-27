@@ -1,0 +1,289 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/MenuScripts/KeyBinds.gd" type="Script" id=1]
+[ext_resource path="res://assets/tres/menutheme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/fonts/upheavtt.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=5]
+size = 48
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.588235, 0.588235, 0.588235, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+Button/colors/font_color = Color( 0.941176, 0.941176, 0.941176, 1 )
+Button/colors/font_color_focus = Color( 0.941176, 0.588235, 0, 1 )
+Button/colors/font_color_hover = Color( 0.941176, 0.588235, 0, 1 )
+Button/colors/font_color_pressed = Color( 0.392157, 0.392157, 0.392157, 1 )
+Button/styles/disabled = SubResource( 3 )
+Button/styles/focus = SubResource( 3 )
+Button/styles/hover = SubResource( 3 )
+Button/styles/normal = SubResource( 3 )
+Button/styles/pressed = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 64
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="KeyBinds" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -400.0
+margin_right = 400.0
+margin_bottom = 400.0
+color = Color( 0.196078, 0.196078, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -380.0
+margin_top = -380.0
+margin_right = 380.0
+margin_bottom = 380.0
+color = Color( 0.392157, 0.392157, 0.392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WarningLabel" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -276.5
+margin_top = -335.0
+margin_right = 276.5
+margin_bottom = -291.0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "bind all keys to exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -270.0
+margin_top = -260.0
+margin_right = 237.5
+margin_bottom = 108.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox_ui_accept" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 507.0
+margin_bottom = 58.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBox_ui_accept"]
+margin_right = 461.0
+margin_bottom = 58.0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+text = "Jump/Accept: "
+align = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/HBox_ui_accept"]
+margin_left = 465.0
+margin_right = 475.0
+margin_bottom = 58.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../../../SaveButton")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../../HBox_ui_cancel/Button")
+theme = SubResource( 2 )
+toggle_mode = true
+
+[node name="HBox_ui_cancel" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 62.0
+margin_right = 507.0
+margin_bottom = 120.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBox_ui_cancel"]
+margin_right = 461.0
+margin_bottom = 58.0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+text = "Back/Cancel: "
+align = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/HBox_ui_cancel"]
+margin_left = 465.0
+margin_right = 475.0
+margin_bottom = 58.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../../HBox_ui_accept/Button")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../../HBox_ui_up/Button")
+theme = SubResource( 2 )
+toggle_mode = true
+
+[node name="HBox_ui_up" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 124.0
+margin_right = 507.0
+margin_bottom = 182.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBox_ui_up"]
+margin_right = 111.0
+margin_bottom = 58.0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+text = "Up: "
+align = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/HBox_ui_up"]
+margin_left = 115.0
+margin_right = 125.0
+margin_bottom = 58.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../../HBox_ui_cancel/Button")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../../HBox_ui_down/Button")
+theme = SubResource( 2 )
+toggle_mode = true
+
+[node name="HBox_ui_down" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 186.0
+margin_right = 507.0
+margin_bottom = 244.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBox_ui_down"]
+margin_right = 194.0
+margin_bottom = 58.0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+text = "Down: "
+align = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/HBox_ui_down"]
+margin_left = 198.0
+margin_right = 208.0
+margin_bottom = 58.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../../HBox_ui_up/Button")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../../HBox_ui_left/Button")
+theme = SubResource( 2 )
+toggle_mode = true
+
+[node name="HBox_ui_left" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 248.0
+margin_right = 507.0
+margin_bottom = 306.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBox_ui_left"]
+margin_right = 184.0
+margin_bottom = 58.0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+text = "Left: "
+align = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/HBox_ui_left"]
+margin_left = 188.0
+margin_right = 198.0
+margin_bottom = 58.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../../HBox_ui_down/Button")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../../HBox_ui_right/Button")
+theme = SubResource( 2 )
+toggle_mode = true
+
+[node name="HBox_ui_right" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 310.0
+margin_right = 507.0
+margin_bottom = 368.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBox_ui_right"]
+margin_right = 219.0
+margin_bottom = 58.0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+text = "Right: "
+align = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/HBox_ui_right"]
+margin_left = 223.0
+margin_right = 233.0
+margin_bottom = 58.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../../HBox_ui_left/Button")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../../../SaveButton")
+theme = SubResource( 2 )
+toggle_mode = true
+
+[node name="SaveButton" type="Button" parent="."]
+margin_left = 593.5
+margin_top = 730.0
+margin_right = 1326.5
+margin_bottom = 740.5
+focus_neighbour_top = NodePath("../VBoxContainer/HBox_ui_right/Button")
+focus_neighbour_bottom = NodePath("../VBoxContainer/HBox_ui_accept/Button")
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Save Keybinds"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CooldownTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="pressed" from="VBoxContainer/HBox_ui_accept/Button" to="." method="_on_ui_accept_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBox_ui_cancel/Button" to="." method="_on_ui_cancel_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBox_ui_up/Button" to="." method="_on_ui_up_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBox_ui_down/Button" to="." method="_on_ui_down_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBox_ui_left/Button" to="." method="_on_ui_left_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBox_ui_right/Button" to="." method="_on_ui_right_pressed"]
+[connection signal="pressed" from="SaveButton" to="." method="_on_SaveButton_pressed"]
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_CooldownTimer_timeout"]

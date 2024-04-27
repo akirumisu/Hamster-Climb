@@ -1,0 +1,420 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/tres/menutheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/MenuScripts/SettingsMenu.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/dynamicfontdata.tres" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/fonts/upheavtt.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=6]
+size = 64
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 48
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 0.588235, 0, 0.392157 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 48
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="SettingsMenu" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -400.0
+margin_right = 400.0
+margin_bottom = 400.0
+color = Color( 0.196078, 0.196078, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -380.0
+margin_top = -380.0
+margin_right = 380.0
+margin_bottom = 380.0
+color = Color( 0.392157, 0.392157, 0.392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -279.5
+margin_top = -370.0
+margin_right = 279.5
+margin_bottom = -309.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 6 )
+text = "SETTINGS"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Video" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -283.0
+margin_top = -300.0
+margin_right = 283.0
+margin_bottom = -112.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DisplayMode" type="Label" parent="Video"]
+margin_right = 255.0
+margin_bottom = 44.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Display:  "
+
+[node name="DisplayButton" type="OptionButton" parent="Video"]
+margin_left = 259.0
+margin_right = 566.0
+margin_bottom = 44.0
+focus_neighbour_top = NodePath("../../Gameplay/AnimationButton")
+focus_neighbour_bottom = NodePath("../VSyncButton")
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Fullscreen"
+items = [ "Windowed", null, false, 0, null, "Borderless", null, false, 1, null, "Fullscreen", null, false, 2, null ]
+selected = 2
+
+[node name="VSync" type="Label" parent="Video"]
+margin_top = 48.0
+margin_right = 255.0
+margin_bottom = 92.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "VSync:"
+
+[node name="VSyncButton" type="CheckButton" parent="Video"]
+margin_left = 259.0
+margin_top = 48.0
+margin_right = 566.0
+margin_bottom = 92.0
+focus_neighbour_top = NodePath("../DisplayButton")
+focus_neighbour_bottom = NodePath("../FPSSlider")
+custom_styles/focus = SubResource( 7 )
+pressed = true
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FPSLimit" type="Label" parent="Video"]
+margin_top = 96.0
+margin_right = 255.0
+margin_bottom = 140.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "FPS Limit:"
+
+[node name="FPSSlider" type="HSlider" parent="Video"]
+margin_left = 259.0
+margin_top = 96.0
+margin_right = 566.0
+margin_bottom = 140.0
+focus_neighbour_top = NodePath("../VSyncButton")
+focus_neighbour_bottom = NodePath("../../Audio/MasterSlider")
+size_flags_vertical = 1
+custom_styles/grabber_area_highlight = SubResource( 7 )
+min_value = 30.0
+max_value = 150.0
+step = 5.0
+value = 60.0
+rounded = true
+tick_count = 24
+
+[node name="FPSCounter" type="Label" parent="Video"]
+margin_top = 144.0
+margin_right = 255.0
+margin_bottom = 188.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.588235, 0.588235, 0.588235, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "FPS: 0"
+
+[node name="FPSText" type="Label" parent="Video"]
+margin_left = 259.0
+margin_top = 144.0
+margin_right = 566.0
+margin_bottom = 188.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "60"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -225.0
+margin_top = -100.0
+margin_right = 225.0
+margin_bottom = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterVolume" type="Label" parent="Audio"]
+margin_right = 382.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 3 )
+text = "Master Volume:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterText" type="Label" parent="Audio/MasterVolume"]
+margin_left = 420.0
+margin_right = 217.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 3 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterSlider" type="HSlider" parent="Audio"]
+margin_top = 48.0
+margin_right = 382.0
+margin_bottom = 64.0
+focus_neighbour_top = NodePath("../../Video/FPSSlider")
+focus_neighbour_bottom = NodePath("../MusicSlider")
+size_flags_vertical = 1
+custom_styles/grabber_area_highlight = SubResource( 7 )
+min_value = -20.0
+max_value = 20.0
+rounded = true
+
+[node name="MusicVolume" type="Label" parent="Audio"]
+margin_top = 68.0
+margin_right = 382.0
+margin_bottom = 112.0
+custom_fonts/font = SubResource( 3 )
+text = "Music Volume:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicText" type="Label" parent="Audio/MusicVolume"]
+margin_left = 420.0
+margin_right = 217.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 3 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicSlider" type="HSlider" parent="Audio"]
+margin_top = 116.0
+margin_right = 382.0
+margin_bottom = 132.0
+focus_neighbour_top = NodePath("../MasterSlider")
+focus_neighbour_bottom = NodePath("../SFXSlider")
+size_flags_vertical = 1
+custom_styles/grabber_area_highlight = SubResource( 7 )
+min_value = -20.0
+max_value = 20.0
+rounded = true
+
+[node name="SFXVolume" type="Label" parent="Audio"]
+margin_top = 136.0
+margin_right = 382.0
+margin_bottom = 180.0
+custom_fonts/font = SubResource( 3 )
+text = "SFX Volume:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SFXVolume" type="Label" parent="Audio/SFXVolume"]
+margin_left = 420.0
+margin_right = 217.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 3 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SFXSlider" type="HSlider" parent="Audio"]
+margin_top = 184.0
+margin_right = 382.0
+margin_bottom = 200.0
+focus_neighbour_top = NodePath("../MusicSlider")
+focus_neighbour_bottom = NodePath("../../Gameplay/SpeedrunButton")
+size_flags_vertical = 1
+custom_styles/grabber_area_highlight = SubResource( 7 )
+min_value = -20.0
+max_value = 20.0
+rounded = true
+
+[node name="Gameplay" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -254.0
+margin_top = 110.0
+margin_right = 254.0
+margin_bottom = 250.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeedrunText" type="Label" parent="Gameplay"]
+margin_right = 428.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 4 )
+text = "Speedrun mode"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeedrunButton" type="CheckButton" parent="Gameplay"]
+margin_left = 432.0
+margin_right = 508.0
+margin_bottom = 44.0
+focus_neighbour_top = NodePath("../../Audio/SFXSlider")
+focus_neighbour_bottom = NodePath("../IntroButton")
+custom_styles/focus = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IntroText" type="Label" parent="Gameplay"]
+margin_top = 48.0
+margin_right = 428.0
+margin_bottom = 92.0
+custom_fonts/font = SubResource( 4 )
+text = "Intro on Startup"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IntroButton" type="CheckButton" parent="Gameplay"]
+margin_left = 432.0
+margin_top = 48.0
+margin_right = 508.0
+margin_bottom = 92.0
+focus_neighbour_top = NodePath("../SpeedrunButton")
+focus_neighbour_bottom = NodePath("../AnimationButton")
+custom_styles/focus = SubResource( 7 )
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationText" type="Label" parent="Gameplay"]
+margin_top = 96.0
+margin_right = 428.0
+margin_bottom = 140.0
+custom_fonts/font = SubResource( 4 )
+text = "Death Animation"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationButton" type="CheckButton" parent="Gameplay"]
+margin_left = 432.0
+margin_top = 96.0
+margin_right = 508.0
+margin_bottom = 140.0
+focus_neighbour_top = NodePath("../IntroButton")
+focus_neighbour_bottom = NodePath("../../Video/DisplayButton")
+custom_styles/focus = SubResource( 7 )
+pressed = true
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -279.5
+margin_top = 280.0
+margin_right = 279.5
+margin_bottom = 30.5
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.784314, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Warning: Some Gameplay Settings
+Require A Restart To Work"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="item_selected" from="Video/DisplayButton" to="." method="_on_DisplayButton_item_selected"]
+[connection signal="toggled" from="Video/VSyncButton" to="." method="_on_VSyncButton_toggled"]
+[connection signal="value_changed" from="Video/FPSSlider" to="." method="_on_FPSSlider_value_changed"]
+[connection signal="value_changed" from="Audio/MasterSlider" to="." method="_on_MasterSlider_value_changed"]
+[connection signal="value_changed" from="Audio/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
+[connection signal="value_changed" from="Audio/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
+[connection signal="toggled" from="Gameplay/SpeedrunButton" to="." method="_on_SpeedrunButton_toggled"]
+[connection signal="toggled" from="Gameplay/IntroButton" to="." method="_on_IntroButton_toggled"]
+[connection signal="toggled" from="Gameplay/AnimationButton" to="." method="_on_AnimationButton_toggled"]

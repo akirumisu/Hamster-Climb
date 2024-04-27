@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/destroyrock.wav-1cdad18ba35e3608ae95ee45790274eb.sample"
+
+[deps]
+
+source_file="res://assets/SFX/destroyrock.wav"
+dest_files=[ "res://.import/destroyrock.wav-1cdad18ba35e3608ae95ee45790274eb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

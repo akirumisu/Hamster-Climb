@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Backwardstts.mp3-ef9a85f7e0d8c3f835259ffd6d922b03.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Backwardstts.mp3"
+dest_files=[ "res://.import/Backwardstts.mp3-ef9a85f7e0d8c3f835259ffd6d922b03.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

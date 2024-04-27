@@ -1,0 +1,166 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/tres/menutheme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/fonts/dynamicfontdata.tres" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/MenuScripts/Endscreen.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/MenuScripts/LevelText.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=157]
+size = 100
+outline_size = 8
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=158]
+size = 86
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=159]
+size = 96
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="Endscreen" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.196078, 0.196078, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+anchor_right = 1.0
+margin_top = 100.0
+margin_bottom = 216.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelText" type="Label" parent="Control/HBoxContainer"]
+margin_left = 568.0
+margin_top = 13.0
+margin_right = 868.0
+margin_bottom = 103.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 157 )
+text = "level"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelLabel" type="Label" parent="Control/HBoxContainer"]
+margin_left = 872.0
+margin_top = 13.0
+margin_right = 1352.0
+margin_bottom = 103.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 157 )
+text = " Cleared!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -441.0
+margin_top = -121.0
+margin_right = 441.0
+margin_bottom = 121.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_right = 367.0
+margin_bottom = 78.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 158 )
+text = "Time: "
+
+[node name="TimeStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_left = 371.0
+margin_right = 890.0
+margin_bottom = 78.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 158 )
+text = "00:00:00.000"
+
+[node name="DeathsLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_top = 82.0
+margin_right = 367.0
+margin_bottom = 160.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 158 )
+text = "Deaths: "
+
+[node name="DeathsStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_left = 371.0
+margin_top = 82.0
+margin_right = 890.0
+margin_bottom = 160.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 158 )
+text = "0"
+
+[node name="HorsesLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_top = 164.0
+margin_right = 367.0
+margin_bottom = 242.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 158 )
+text = "Bamboo: "
+
+[node name="HorsesStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_left = 371.0
+margin_top = 164.0
+margin_right = 890.0
+margin_bottom = 242.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 158 )
+text = "0"
+
+[node name="Continue" type="Label" parent="Control"]
+modulate = Color( 0.784314, 0.470588, 0.235294, 1 )
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -250.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 159 )
+text = "Press <JUMP> To Continue"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

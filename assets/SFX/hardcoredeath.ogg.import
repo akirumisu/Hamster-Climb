@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hardcoredeath.ogg-e21c7c70ec9e2d7fb141f6c646cccae1.oggstr"
+
+[deps]
+
+source_file="res://assets/SFX/hardcoredeath.ogg"
+dest_files=[ "res://.import/hardcoredeath.ogg-e21c7c70ec9e2d7fb141f6c646cccae1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sunattack4.wav-f6af80dae6ea22037a27cf7bd28f7932.sample"
+
+[deps]
+
+source_file="res://assets/SFX/sunattack4.wav"
+dest_files=[ "res://.import/sunattack4.wav-f6af80dae6ea22037a27cf7bd28f7932.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

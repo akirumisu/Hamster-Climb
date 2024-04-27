@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/sprites/Knife.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/WeebZoneScripts/Attack2.gd" type="Script" id=2]
+
+[node name="Attack2" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Attack2Needle1" type="Area2D" parent="."]
+position = Vector2( 0, 0.5 )
+rotation = 1.5708
+
+[node name="Sprite" type="Sprite" parent="Attack2Needle1"]
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Attack2Needle1"]
+polygon = PoolVector2Array( 1, 2, 1, -2, -0.5, -4, -2, -2, -2, 2, -0.5, 4 )
+
+[node name="Attack2Needle2" type="Area2D" parent="."]
+position = Vector2( 0, 30 )
+rotation = 1.5708
+
+[node name="Sprite" type="Sprite" parent="Attack2Needle2"]
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Attack2Needle2"]
+polygon = PoolVector2Array( 1, 2, 1, -2, -0.5, -4, -2, -2, -2, 2, -0.5, 4 )
+
+[node name="Attack2Needle3" type="Area2D" parent="."]
+position = Vector2( 0, -29.5 )
+rotation = 1.5708
+
+[node name="Sprite" type="Sprite" parent="Attack2Needle3"]
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Attack2Needle3"]
+polygon = PoolVector2Array( 1, 2, 1, -2, -0.5, -4, -2, -2, -2, 2, -0.5, 4 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[connection signal="body_entered" from="Attack2Needle1" to="." method="_on_Attack2Needle1_body_entered"]
+[connection signal="body_entered" from="Attack2Needle2" to="." method="_on_Attack2Needle1_body_entered"]
+[connection signal="body_entered" from="Attack2Needle3" to="." method="_on_Attack2Needle1_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

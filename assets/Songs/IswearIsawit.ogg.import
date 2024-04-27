@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/IswearIsawit.ogg-049d0bcdf3d6044839c4d02fdb06e893.oggstr"
+
+[deps]
+
+source_file="res://assets/Songs/IswearIsawit.ogg"
+dest_files=[ "res://.import/IswearIsawit.ogg-049d0bcdf3d6044839c4d02fdb06e893.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Egyptian_fortress_boss.ogg-efb443099806adedec77819c9f9d9f08.oggstr"
+
+[deps]
+
+source_file="res://assets/Songs/Egyptian_fortress_boss.ogg"
+dest_files=[ "res://.import/Egyptian_fortress_boss.ogg-efb443099806adedec77819c9f9d9f08.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

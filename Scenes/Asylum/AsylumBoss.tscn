@@ -1,0 +1,2060 @@
+[gd_scene load_steps=190 format=2]
+
+[ext_resource path="res://Scripts/WorldScripts/Level.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/PlayerScripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/explosion.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/MenuScripts/SpeedrunTimer.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/AsylumScripts/Nina.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Menus/PauseMenu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/DeathSounds.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/tiles/tileset.tres" type="TileSet" id=8]
+[ext_resource path="res://Scripts/PlayerScripts/PlayerSprite.gd" type="Script" id=9]
+[ext_resource path="res://assets/sprites/hamster.png" type="Texture" id=10]
+[ext_resource path="res://assets/Songs/Egyptian_fortress_boss.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Scripts/WorldScripts/Music.gd" type="Script" id=12]
+[ext_resource path="res://assets/sprites/amduat.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/rune010.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/NehebkaL.png" type="Texture" id=15]
+[ext_resource path="res://assets/SFX/destroyrock.wav" type="AudioStream" id=16]
+[ext_resource path="res://assets/sprites/benben.png" type="Texture" id=17]
+[ext_resource path="res://assets/sprites/warningarrow.png" type="Texture" id=18]
+[ext_resource path="res://assets/SFX/chargeattack.wav" type="AudioStream" id=19]
+[ext_resource path="res://Scenes/Menus/Endscreen.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/Backgrounds/sahara-dunes.png" type="Texture" id=21]
+[ext_resource path="res://assets/Backgrounds/mars-dunes.png" type="Texture" id=22]
+[ext_resource path="res://assets/SFX/charging.wav" type="AudioStream" id=23]
+[ext_resource path="res://assets/sprites/rune02.png" type="Texture" id=24]
+[ext_resource path="res://assets/sprites/rune01.png" type="Texture" id=25]
+[ext_resource path="res://assets/SFX/chargestopped.wav" type="AudioStream" id=26]
+[ext_resource path="res://assets/sprites/rune09.png" type="Texture" id=27]
+[ext_resource path="res://assets/sprites/rune04.png" type="Texture" id=28]
+[ext_resource path="res://assets/sprites/rune05.png" type="Texture" id=29]
+[ext_resource path="res://assets/sprites/rune03.png" type="Texture" id=30]
+[ext_resource path="res://assets/Songs/Hojoj_theme.ogg" type="AudioStream" id=31]
+[ext_resource path="res://assets/sprites/rune08.png" type="Texture" id=32]
+[ext_resource path="res://assets/sprites/rune06.png" type="Texture" id=33]
+[ext_resource path="res://assets/sprites/rune07.png" type="Texture" id=34]
+[ext_resource path="res://assets/SFX/forsenexplosion.wav" type="AudioStream" id=35]
+[ext_resource path="res://Scripts/AsylumScripts/Peppah.gd" type="Script" id=36]
+[ext_resource path="res://Scripts/AsylumScripts/Rocks.gd" type="Script" id=37]
+[ext_resource path="res://Scripts/AsylumScripts/Runes.gd" type="Script" id=38]
+[ext_resource path="res://assets/particles/random_selection.png" type="Texture" id=39]
+[ext_resource path="res://assets/particles/alpha_random_selection.png" type="Texture" id=40]
+[ext_resource path="res://assets/particles/alpha_floaty_64.png" type="Texture" id=41]
+[ext_resource path="res://assets/particles/floaty_64.png" type="Texture" id=42]
+[ext_resource path="res://assets/fonts/alagard.ttf" type="DynamicFontData" id=43]
+[ext_resource path="res://assets/menu/HPbar.png" type="Texture" id=44]
+[ext_resource path="res://assets/Songs/Vaata.ogg" type="AudioStream" id=45]
+[ext_resource path="res://assets/tres/menutheme.tres" type="Theme" id=47]
+[ext_resource path="res://assets/SFX/Backwardstts.mp3" type="AudioStream" id=49]
+[ext_resource path="res://assets/particles/particle.png" type="Texture" id=50]
+[ext_resource path="res://assets/SFX/hitHurt5.wav" type="AudioStream" id=55]
+[ext_resource path="res://assets/SFX/hitHurt3.wav" type="AudioStream" id=56]
+[ext_resource path="res://assets/SFX/hitHurt4.wav" type="AudioStream" id=57]
+[ext_resource path="res://assets/SFX/hitHurt.wav" type="AudioStream" id=58]
+[ext_resource path="res://assets/SFX/hitHurt2.wav" type="AudioStream" id=59]
+[ext_resource path="res://assets/SFX/runeselect5.wav" type="AudioStream" id=61]
+[ext_resource path="res://assets/SFX/runeselect4.wav" type="AudioStream" id=62]
+[ext_resource path="res://assets/SFX/runeselect6.wav" type="AudioStream" id=63]
+[ext_resource path="res://assets/SFX/runeselect1.wav" type="AudioStream" id=64]
+[ext_resource path="res://assets/SFX/runeselect2.wav" type="AudioStream" id=65]
+[ext_resource path="res://assets/SFX/runeselect3.wav" type="AudioStream" id=66]
+[ext_resource path="res://assets/SFX/death.wav" type="AudioStream" id=67]
+[ext_resource path="res://assets/SFX/powerUp.wav" type="AudioStream" id=68]
+[ext_resource path="res://assets/SFX/explosion1.wav" type="AudioStream" id=69]
+[ext_resource path="res://assets/SFX/explosion2.wav" type="AudioStream" id=70]
+[ext_resource path="res://assets/SFX/explosion3.wav" type="AudioStream" id=71]
+[ext_resource path="res://assets/SFX/explosion4.wav" type="AudioStream" id=72]
+[ext_resource path="res://assets/SFX/explosion5.wav" type="AudioStream" id=73]
+[ext_resource path="res://assets/SFX/blipSelect.wav" type="AudioStream" id=74]
+[ext_resource path="res://assets/SFX/commence.wav" type="AudioStream" id=75]
+
+[sub_resource type="AtlasTexture" id=602]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 16, 12, 16 )
+
+[sub_resource type="AtlasTexture" id=95]
+atlas = ExtResource( 10 )
+region = Rect2( 12, 16, 12, 16 )
+
+[sub_resource type="AtlasTexture" id=96]
+atlas = ExtResource( 10 )
+region = Rect2( 24, 16, 12, 16 )
+
+[sub_resource type="AtlasTexture" id=97]
+atlas = ExtResource( 10 )
+region = Rect2( 36, 16, 12, 16 )
+
+[sub_resource type="AtlasTexture" id=403]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 12, 16 )
+
+[sub_resource type="AtlasTexture" id=601]
+atlas = ExtResource( 10 )
+region = Rect2( 12, 0, 12, 16 )
+
+[sub_resource type="AtlasTexture" id=92]
+atlas = ExtResource( 10 )
+region = Rect2( 24, 0, 12, 16 )
+
+[sub_resource type="AtlasTexture" id=93]
+atlas = ExtResource( 10 )
+region = Rect2( 36, 0, 12, 16 )
+
+[sub_resource type="SpriteFrames" id=298]
+animations = [ {
+"frames": [ SubResource( 602 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ) ],
+"loop": true,
+"name": "walkleft",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 403 ), SubResource( 601 ), SubResource( 92 ), SubResource( 93 ) ],
+"loop": true,
+"name": "walkright",
+"speed": 6.0
+} ]
+
+[sub_resource type="ConvexPolygonShape2D" id=603]
+points = PoolVector2Array( 3, 4.75, 1.6, -5, -1.6, -5, -3, 4.76 )
+
+[sub_resource type="RectangleShape2D" id=604]
+extents = Vector2( 3.75, 5.25 )
+
+[sub_resource type="Gradient" id=72]
+colors = PoolColorArray( 1, 0, 0, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=48]
+gradient = SubResource( 72 )
+
+[sub_resource type="ParticlesMaterial" id=73]
+lifetime_randomness = 0.5
+emission_shape = 5
+emission_ring_radius = 10.0
+emission_ring_inner_radius = 5.0
+emission_ring_height = 100.0
+emission_ring_axis = Vector3( 0, 0, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, -25, 0 )
+angular_velocity = 45.0
+angular_velocity_random = 0.5
+orbit_velocity = 1.0
+orbit_velocity_random = 0.5
+linear_accel = 10.0
+linear_accel_random = 0.5
+radial_accel = -10.0
+radial_accel_random = 0.5
+scale = 1.5
+scale_random = 1.0
+color = Color( 1, 0, 0, 1 )
+color_ramp = SubResource( 48 )
+
+[sub_resource type="CanvasItemMaterial" id=116]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 7
+particles_anim_loop = true
+
+[sub_resource type="Gradient" id=296]
+offsets = PoolRealArray( 0, 0.329193, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=292]
+gradient = SubResource( 296 )
+
+[sub_resource type="Curve" id=119]
+_data = [ Vector2( 0, 0.520455 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=293]
+curve = SubResource( 119 )
+
+[sub_resource type="ParticlesMaterial" id=121]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource( 293 )
+color = Color( 0, 1, 1, 1 )
+color_ramp = SubResource( 292 )
+anim_speed = 1.0
+anim_speed_random = 0.5
+
+[sub_resource type="Animation" id=616]
+resource_name = "WinSequence"
+length = 9.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 3, 4, 4.3, 4.6, 4.9, 5.2, 6.2, 7.2, 7.3, 7.5, 8, 8.5, 9, 9.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.25, 2.07053, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( -15, 0 ), Vector2( -15, 0 ), Vector2( -15, 2 ), Vector2( -10, -5 ), Vector2( 0, 0 ), Vector2( 15, 0 ), Vector2( 15, 0 ), Vector2( 0, 0 ), Vector2( 0, 2 ), Vector2( 0, -3 ), Vector2( 0, -10 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 4, 4.3, 4.6, 4.9, 5.2, 6.2, 7.2, 7.3, 7.5, 8, 8.5, 9, 9.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.75, 0.75 ), Vector2( 0.75, 0.75 ), Vector2( 0.75, 0.75 ), Vector2( 0.75, 0.5 ), Vector2( 0.75, 0.75 ), Vector2( 0.5, 0.75 ), Vector2( 0.75, 0.75 ), Vector2( 0.75, 0.75 ), Vector2( 0.75, 0.75 ), Vector2( 0.75, 0.5 ), Vector2( 0.75, 0.75 ), Vector2( 0.75, 0.75 ), Vector2( 0.75, 0.75 ), Vector2( 0.75, 0.75 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerSprite:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 3, 4, 4.3, 4.6, 4.9, 5.2, 6.2, 7.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 360.0, 360.0, 400.0, 500.0, 720.0, 360.0, 360.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerSprite:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5.2, 6.2, 7.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true, true, true, true, false, false ]
+}
+
+[sub_resource type="Animation" id=44]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=45]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=43]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=139]
+size = 64
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 43 )
+
+[sub_resource type="DynamicFont" id=288]
+
+[sub_resource type="StyleBoxTexture" id=289]
+texture = ExtResource( 44 )
+region_rect = Rect2( 0, 0, 320.576, 25 )
+
+[sub_resource type="StyleBoxFlat" id=290]
+bg_color = Color( 1, 0, 0, 1 )
+border_width_left = 74
+border_width_top = 25
+border_width_right = 77
+border_width_bottom = 25
+border_color = Color( 0, 0, 0, 0 )
+corner_detail = 1
+
+[sub_resource type="Theme" id=138]
+ProgressBar/fonts/font = SubResource( 288 )
+ProgressBar/styles/bg = SubResource( 289 )
+ProgressBar/styles/fg = SubResource( 290 )
+
+[sub_resource type="Shader" id=165]
+code = "shader_type canvas_item;
+
+uniform vec4 color: hint_color;
+uniform float multiplier = 0.2;
+uniform float softness = 3.0;
+
+void fragment()
+{
+	float value = distance(UV, vec2(0.5));
+	COLOR = vec4(color.rgb, smoothstep(multiplier,softness,value));
+}"
+
+[sub_resource type="ShaderMaterial" id=164]
+shader = SubResource( 165 )
+shader_param/color = null
+shader_param/multiplier = 0.75
+shader_param/softness = 0.75
+
+[sub_resource type="AtlasTexture" id=610]
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=611]
+atlas = ExtResource( 15 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=612]
+atlas = ExtResource( 15 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=613]
+atlas = ExtResource( 15 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=614]
+animations = [ {
+"frames": [ SubResource( 610 ), SubResource( 611 ), SubResource( 612 ), SubResource( 613 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=98]
+radius = 19.0
+height = 40.0
+
+[sub_resource type="CapsuleShape2D" id=102]
+radius = 20.0
+height = 39.208
+
+[sub_resource type="Gradient" id=122]
+offsets = PoolRealArray( 0.428571, 1 )
+colors = PoolColorArray( 1, 0, 0, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=123]
+gradient = SubResource( 122 )
+
+[sub_resource type="ParticlesMaterial" id=124]
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 75.0
+angular_velocity = 90.0
+angular_velocity_random = 0.5
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 3.0
+scale_random = 0.5
+color = Color( 1, 0, 0, 1 )
+color_ramp = SubResource( 123 )
+
+[sub_resource type="Gradient" id=178]
+offsets = PoolRealArray( 0, 0.118012, 1 )
+colors = PoolColorArray( 0.588235, 0.588235, 0.588235, 0, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=179]
+gradient = SubResource( 178 )
+
+[sub_resource type="ParticlesMaterial" id=177]
+emission_shape = 2
+emission_box_extents = Vector3( 24.683, 1, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 70.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 50.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.0
+scale = 3.0
+scale_random = 1.0
+color = Color( 0.862745, 0.862745, 0.862745, 1 )
+color_ramp = SubResource( 179 )
+
+[sub_resource type="Gradient" id=281]
+offsets = PoolRealArray( 0, 0.217391, 1 )
+colors = PoolColorArray( 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 )
+
+[sub_resource type="GradientTexture" id=168]
+gradient = SubResource( 281 )
+
+[sub_resource type="Curve" id=282]
+min_value = -0.1
+max_value = 0.1
+_data = [ Vector2( 0, 6.81821e-05 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.0540909 ), 0.180984, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=170]
+curve = SubResource( 282 )
+
+[sub_resource type="Curve" id=175]
+_data = [ Vector2( 0, 0.518182 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.118182 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=176]
+curve = SubResource( 175 )
+
+[sub_resource type="ParticlesMaterial" id=174]
+lifetime_randomness = 0.5
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 1.0
+orbit_velocity_curve = SubResource( 170 )
+linear_accel = -0.5
+linear_accel_random = 1.0
+tangential_accel = 7.0
+tangential_accel_random = 1.0
+damping = 0.1
+damping_random = 1.0
+scale = 0.1
+scale_random = 1.0
+scale_curve = SubResource( 176 )
+color_ramp = SubResource( 168 )
+
+[sub_resource type="CanvasItemMaterial" id=108]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id=109]
+max_value = 5.0
+_data = [ Vector2( 0, 2.59659 ), 0.0, -7.43435, 0, 0, Vector2( 1, 0 ), -0.602466, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=110]
+curve = SubResource( 109 )
+
+[sub_resource type="Gradient" id=111]
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=112]
+gradient = SubResource( 111 )
+
+[sub_resource type="Curve" id=113]
+_data = [ Vector2( 0, 0.513636 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=114]
+curve = SubResource( 113 )
+
+[sub_resource type="ParticlesMaterial" id=107]
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 100.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.5
+scale_curve = SubResource( 114 )
+color = Color( 0, 1, 1, 1 )
+color_ramp = SubResource( 112 )
+anim_speed = 1.0
+anim_speed_curve = SubResource( 110 )
+anim_offset = 1.0
+anim_offset_random = 1.0
+
+[sub_resource type="ParticlesMaterial" id=99]
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+angular_velocity = 45.0
+angular_velocity_random = 0.5
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 1.5
+scale_random = 0.5
+color = Color( 1, 0.0980392, 0.0980392, 1 )
+hue_variation = 0.15
+hue_variation_random = 0.15
+
+[sub_resource type="RectangleShape2D" id=605]
+extents = Vector2( 24.5, 24.5 )
+
+[sub_resource type="CanvasItemMaterial" id=125]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id=126]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, 13.0909 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=127]
+curve = SubResource( 126 )
+
+[sub_resource type="Gradient" id=128]
+offsets = PoolRealArray( 0, 0.0559006, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=129]
+gradient = SubResource( 128 )
+
+[sub_resource type="Curve" id=130]
+_data = [ Vector2( 0, 0.509091 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=131]
+curve = SubResource( 130 )
+
+[sub_resource type="ParticlesMaterial" id=132]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 10.0
+angular_velocity_curve = SubResource( 127 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 1.5
+scale_random = 0.2
+scale_curve = SubResource( 131 )
+color_ramp = SubResource( 129 )
+hue_variation = 0.35
+hue_variation_random = 0.2
+anim_speed = 1.0
+anim_offset = 1.0
+anim_offset_random = 1.0
+
+[sub_resource type="RectangleShape2D" id=606]
+extents = Vector2( 26, 26 )
+
+[sub_resource type="RectangleShape2D" id=101]
+extents = Vector2( 240, 104 )
+
+[sub_resource type="ParticlesMaterial" id=299]
+emission_shape = 5
+emission_ring_radius = 5.0
+emission_ring_inner_radius = 0.0
+emission_ring_height = 1.0
+emission_ring_axis = Vector3( 0, 0, 1 )
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 0.5
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 90.0
+angle_random = 0.5
+scale = 2.0
+scale_random = 0.5
+color = Color( 0, 0.952941, 1, 1 )
+
+[sub_resource type="ParticlesMaterial" id=297]
+lifetime_randomness = 0.25
+emission_shape = 5
+emission_ring_radius = 5.0
+emission_ring_inner_radius = 5.0
+emission_ring_height = 1.0
+emission_ring_axis = Vector3( 0, 0, 1 )
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 30.0
+angular_velocity = 360.0
+angular_velocity_random = 0.5
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 15.0
+scale = 2.0
+color = Color( 0, 0.952941, 1, 1 )
+
+[sub_resource type="ParticlesMaterial" id=300]
+lifetime_randomness = 0.25
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 30.0
+initial_velocity_random = 0.5
+angular_velocity = 90.0
+angular_velocity_random = 0.5
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 20.0
+scale = 3.0
+scale_random = 0.2
+color = Color( 0.392157, 0.392157, 0.392157, 1 )
+
+[sub_resource type="Gradient" id=301]
+colors = PoolColorArray( 1, 0, 0, 1, 0.196777, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=291]
+gradient = SubResource( 301 )
+
+[sub_resource type="ParticlesMaterial" id=302]
+lifetime_randomness = 0.1
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 25.0
+initial_velocity_random = 0.1
+angular_velocity = 180.0
+angular_velocity_random = 0.25
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 5.0
+scale = 5.0
+scale_random = 0.1
+color = Color( 1, 0, 0, 1 )
+color_ramp = SubResource( 291 )
+
+[sub_resource type="CircleShape2D" id=115]
+radius = 8.06226
+
+[sub_resource type="RectangleShape2D" id=303]
+extents = Vector2( 6.5, 1 )
+
+[sub_resource type="ParticlesMaterial" id=103]
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 50.0
+gravity = Vector3( 0, 25, 0 )
+initial_velocity = 25.0
+initial_velocity_random = 0.2
+angular_velocity = 90.0
+angular_velocity_random = 0.5
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 2.0
+scale_random = 0.5
+color = Color( 0.980392, 0.784314, 0.588235, 1 )
+
+[sub_resource type="ParticlesMaterial" id=104]
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 100.0
+gravity = Vector3( 0, 100, 0 )
+initial_velocity = 80.0
+initial_velocity_random = 0.3
+angular_velocity = 90.0
+angular_velocity_random = 0.5
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 100.0
+damping_random = 0.2
+scale = 2.5
+scale_random = 0.5
+color = Color( 0.980392, 0.784314, 0.588235, 1 )
+
+[sub_resource type="StreamTexture" id=607]
+load_path = "res://.import/rune01.png-84519f8e1d3c85d6c9d2ac8d00de6d60.stex"
+
+[sub_resource type="StreamTexture" id=608]
+load_path = "res://.import/rune02.png-bceaf67d04f5c1c10061fd5feca86d65.stex"
+
+[sub_resource type="StreamTexture" id=609]
+load_path = "res://.import/rune03.png-5d8eb41054a4cd0fc178a885a6153bc9.stex"
+
+[sub_resource type="RectangleShape2D" id=304]
+extents = Vector2( 6.5, 1 )
+
+[sub_resource type="RectangleShape2D" id=105]
+extents = Vector2( 63, 104 )
+
+[sub_resource type="RectangleShape2D" id=106]
+extents = Vector2( 59, 104 )
+
+[sub_resource type="CanvasItemMaterial" id=157]
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 7
+particles_anim_loop = true
+
+[sub_resource type="Gradient" id=158]
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=294]
+gradient = SubResource( 158 )
+
+[sub_resource type="Curve" id=161]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0199134, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=295]
+curve = SubResource( 161 )
+
+[sub_resource type="ParticlesMaterial" id=160]
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 180.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 100.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 90.0
+scale = 1.5
+scale_curve = SubResource( 295 )
+color = Color( 0.392157, 0, 0, 1 )
+color_ramp = SubResource( 294 )
+anim_speed = 3.0
+
+[sub_resource type="AtlasTexture" id=475]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=476]
+atlas = ExtResource( 3 )
+region = Rect2( 71, 0, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=477]
+atlas = ExtResource( 3 )
+region = Rect2( 142, 0, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=478]
+atlas = ExtResource( 3 )
+region = Rect2( 213, 0, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=479]
+atlas = ExtResource( 3 )
+region = Rect2( 284, 0, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=480]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 100, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=481]
+atlas = ExtResource( 3 )
+region = Rect2( 71, 100, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=482]
+atlas = ExtResource( 3 )
+region = Rect2( 142, 100, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=483]
+atlas = ExtResource( 3 )
+region = Rect2( 213, 100, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=484]
+atlas = ExtResource( 3 )
+region = Rect2( 284, 100, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=485]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 200, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=486]
+atlas = ExtResource( 3 )
+region = Rect2( 71, 200, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=487]
+atlas = ExtResource( 3 )
+region = Rect2( 142, 200, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=488]
+atlas = ExtResource( 3 )
+region = Rect2( 213, 200, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=489]
+atlas = ExtResource( 3 )
+region = Rect2( 284, 200, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=490]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 300, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=491]
+atlas = ExtResource( 3 )
+region = Rect2( 71, 300, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=492]
+atlas = ExtResource( 3 )
+region = Rect2( 142, 300, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=493]
+atlas = ExtResource( 3 )
+region = Rect2( 213, 300, 71, 100 )
+
+[sub_resource type="AtlasTexture" id=494]
+atlas = ExtResource( 3 )
+region = Rect2( 284, 300, 71, 100 )
+
+[sub_resource type="SpriteFrames" id=615]
+animations = [ {
+"frames": [ SubResource( 475 ), SubResource( 476 ), SubResource( 477 ), SubResource( 478 ), SubResource( 479 ), SubResource( 480 ), SubResource( 481 ), SubResource( 482 ), SubResource( 483 ), SubResource( 484 ), SubResource( 485 ), SubResource( 486 ), SubResource( 487 ), SubResource( 488 ), SubResource( 489 ), SubResource( 490 ), SubResource( 491 ), SubResource( 492 ), SubResource( 493 ), SubResource( 494 ) ],
+"loop": false,
+"name": "explode",
+"speed": 15.0
+} ]
+
+[sub_resource type="Gradient" id=167]
+offsets = PoolRealArray( 0, 0.217391, 1 )
+colors = PoolColorArray( 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 )
+
+[sub_resource type="GradientTexture" id=283]
+gradient = SubResource( 167 )
+
+[sub_resource type="Curve" id=169]
+min_value = -0.1
+max_value = 0.1
+_data = [ Vector2( 0, 6.81821e-05 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.0540909 ), 0.180984, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=284]
+curve = SubResource( 169 )
+
+[sub_resource type="Curve" id=171]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.236364 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=285]
+curve = SubResource( 171 )
+
+[sub_resource type="ParticlesMaterial" id=173]
+lifetime_randomness = 0.5
+emission_shape = 2
+emission_box_extents = Vector3( 500, 50, 1 )
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 25.0
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 1.0
+orbit_velocity_curve = SubResource( 284 )
+linear_accel = -0.5
+linear_accel_random = 1.0
+tangential_accel = 7.0
+tangential_accel_random = 1.0
+damping = 0.1
+damping_random = 1.0
+scale_random = 1.0
+scale_curve = SubResource( 285 )
+color_ramp = SubResource( 283 )
+
+[node name="AsylumBoss" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="background" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="background"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sahara-dunes4" type="Sprite" parent="background"]
+position = Vector2( 361.9, 125.5 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 21 )
+
+[node name="Sahara-dunes3" type="Sprite" parent="background"]
+position = Vector2( 120.9, 125.5 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 21 )
+
+[node name="Sahara-dunes2" type="Sprite" parent="background"]
+position = Vector2( -120.1, 125.5 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 21 )
+
+[node name="Sahara-dunes1" type="Sprite" parent="background"]
+position = Vector2( -361.3, 125.5 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 21 )
+
+[node name="Mars-dunes1" type="Sprite" parent="background"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 362.1, 125.5 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 22 )
+
+[node name="Mars-dunes2" type="Sprite" parent="background"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 120.7, 125.5 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 22 )
+
+[node name="Mars-dunes3" type="Sprite" parent="background"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -120.7, 125.5 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 22 )
+
+[node name="Mars-dunes4" type="Sprite" parent="background"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -362.1, 125.5 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 22 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 0, 201 )
+z_index = 1
+collision_layer = 3
+collision_mask = 3
+script = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 0.25, 0.25 )
+limit_left = -480
+limit_top = 0
+limit_right = 480
+limit_bottom = 270
+
+[node name="PlayerSprite" type="AnimatedSprite" parent="Player"]
+scale = Vector2( 0.75, 0.75 )
+frames = SubResource( 298 )
+animation = "walkleft"
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 0, 0.5 )
+z_index = 1
+shape = SubResource( 603 )
+
+[node name="PlayerArea2D" type="Area2D" parent="Player"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/PlayerArea2D"]
+position = Vector2( 0, 0.4 )
+scale = Vector2( 0.94, 1 )
+z_index = 2
+shape = SubResource( 604 )
+
+[node name="Particles2D" type="Particles2D" parent="Player"]
+emitting = false
+amount = 100
+lifetime = 0.2
+randomness = 0.5
+visibility_rect = Rect2( 0, 0, 0, 0 )
+process_material = SubResource( 73 )
+
+[node name="DeathSounds" parent="Player" instance=ExtResource( 7 )]
+
+[node name="MEGA" type="Particles2D" parent="Player"]
+material = SubResource( 116 )
+emitting = false
+amount = 3
+lifetime = 2.0
+process_material = SubResource( 121 )
+texture = ExtResource( 42 )
+normal_map = ExtResource( 41 )
+
+[node name="PeppahWarning" type="Sprite" parent="Player"]
+visible = false
+position = Vector2( 0, -100 )
+z_index = 1
+texture = ExtResource( 18 )
+flip_h = true
+
+[node name="CoyoteTimer" type="Timer" parent="Player"]
+wait_time = 0.08
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+anims/WinSequence = SubResource( 616 )
+
+[node name="Tiles" type="TileMap" parent="."]
+z_index = 1
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( 1769397, 2, 8, 1769398, 2, 10, 1769399, 2, 262154, 1769400, 2, 10, 1769401, 2, 262154, 1769402, 2, 262154, 1769403, 2, 10, 1769404, 2, 10, 1769405, 2, 10, 1769406, 2, 262154, 1769407, 2, 524298, 1769408, 2, 524298, 1769409, 2, 262154, 1769410, 2, 524298, 1769411, 2, 524298, 1769412, 2, 262154, 1769413, 2, 10, 1769414, 2, 10, 1769415, 2, 524298, 1769416, 2, 10, 1769417, 2, 524298, 1769418, 2, 10, 1769419, 2, 262154, 1769420, 2, 10, 1769421, 2, 524298, 1769422, 2, 262154, 1769423, 2, 524298, 1769424, 2, 524298, 1769425, 2, 262154, 1769426, 2, 262154, 1769427, 2, 10, 1769428, 2, 524298, 1769429, 2, 10, 1769430, 2, 10, 1769431, 2, 524298, 1769432, 2, 10, 1769433, 2, 524298, 1769434, 2, 10, 1769435, 2, 262154, 1769436, 2, 524298, 1769437, 2, 262154, 1769438, 2, 10, 1769439, 2, 10, 1769440, 2, 524298, 1769441, 2, 524298, 1769442, 2, 524298, 1769443, 2, 524298, 1769444, 2, 524298, 1769445, 2, 10, 1769446, 2, 262154, 1769447, 2, 524298, 1769448, 2, 262154, 1769449, 2, 524298, 1769450, 2, 524298, 1769451, 2, 524298, 1769452, 2, 262154, 1769453, 2, 524298, 1769454, 2, 524298, 1769455, 2, 262154, 1769456, 2, 10, 1769457, 2, 10, 1769458, 2, 10, 1769459, 2, 262154, 1769460, 2, 262154, 1769461, 2, 10, 1769462, 2, 262154, 1769463, 2, 10, 1769464, 2, 262154, 1769465, 2, 262154, 1769466, 2, 10, 1769467, 2, 262154, 1769468, 2, 524298, 1769469, 2, 262154, 1769470, 2, 10, 1769471, 2, 262154, 1703936, 2, 262154, 1703937, 2, 10, 1703938, 2, 524298, 1703939, 2, 524298, 1703940, 2, 262154, 1703941, 2, 262154, 1703942, 2, 524298, 1703943, 2, 524298, 1703944, 2, 262154, 1703945, 2, 262154, 1703946, 2, 524298, 1703947, 2, 524298, 1703948, 2, 10, 1703949, 2, 262154, 1703950, 2, 262154, 1703951, 2, 524298, 1703952, 2, 10, 1703953, 2, 524298, 1703954, 2, 524298, 1703955, 2, 524298, 1703956, 2, 524298, 1703957, 2, 10, 1703958, 2, 262154, 1703959, 2, 10, 1703960, 2, 524298, 1703961, 2, 524298, 1703962, 2, 524298, 1703963, 2, 524298, 1703964, 2, 262154, 1703965, 2, 10, 1703966, 2, 262154, 1703967, 2, 262154, 1703968, 2, 524298, 1703969, 2, 262154, 1703970, 2, 524298, 1703971, 2, 10, 1703972, 2, 10, 1703973, 2, 524298, 1703974, 2, 10, 1703975, 2, 10, 1703976, 2, 262154, 1703977, 2, 524298, 1703978, 2, 524298, 1703979, 2, 524298, 1703980, 2, 10, 1703981, 2, 524298, 1703982, 2, 262154, 1703983, 2, 262154, 1703984, 2, 262154, 1703985, 2, 262154, 1703986, 2, 262154, 1703987, 2, 262154, 1703988, 2, 524298, 1703989, 2, 524298, 1703990, 2, 524298, 1703991, 2, 262154, 1703992, 2, 262154, 1703993, 2, 262154, 1703994, 2, 524298, 1703995, 2, 262154, 1703996, 2, 10, 1703997, 2, 262154, 1703998, 2, 524298, 1703999, 2, 524298, 1704000, 2, 524298, 1704001, 2, 262154, 1704002, 2, 524298, 1704003, 2, 524298, 1704004, 2, 262154, 1704005, 2, 524298, 1704006, 2, 524298, 1704007, 2, 524298, 1704008, 2, 524298, 1704009, 2, 10, 1704010, 2, 524298, 1704011, 2, 11, 1834933, 2, 589832, 1834934, 2, 655369, 1834935, 2, 131081, 1834936, 2, 655369, 1834937, 2, 131081, 1834938, 2, 655369, 1834939, 2, 655369, 1834940, 2, 655369, 1834941, 2, 393225, 1834942, 2, 131081, 1834943, 2, 655369, 1834944, 2, 131081, 1834945, 2, 393225, 1834946, 2, 131081, 1834947, 2, 393225, 1834948, 2, 655369, 1834949, 2, 393225, 1834950, 2, 393225, 1834951, 2, 131081, 1834952, 2, 655369, 1834953, 2, 393225, 1834954, 2, 131081, 1834955, 2, 655369, 1834956, 2, 655369, 1834957, 2, 131081, 1834958, 2, 655369, 1834959, 2, 393225, 1834960, 2, 393225, 1834961, 2, 655369, 1834962, 2, 393225, 1834963, 2, 393225, 1834964, 2, 655369, 1834965, 2, 655369, 1834966, 2, 131081, 1834967, 2, 131081, 1834968, 2, 131081, 1834969, 2, 655369, 1834970, 2, 655369, 1834971, 2, 131081, 1834972, 2, 393225, 1834973, 2, 655369, 1834974, 2, 131081, 1834975, 2, 655369, 1834976, 2, 393225, 1834977, 2, 655369, 1834978, 2, 655369, 1834979, 2, 655369, 1834980, 2, 655369, 1834981, 2, 131081, 1834982, 2, 655369, 1834983, 2, 131081, 1834984, 2, 393225, 1834985, 2, 393225, 1834986, 2, 393225, 1834987, 2, 131081, 1834988, 2, 131081, 1834989, 2, 655369, 1834990, 2, 393225, 1834991, 2, 131081, 1834992, 2, 393225, 1834993, 2, 393225, 1834994, 2, 393225, 1834995, 2, 655369, 1834996, 2, 131081, 1834997, 2, 131081, 1834998, 2, 655369, 1834999, 2, 131081, 1835000, 2, 655369, 1835001, 2, 393225, 1835002, 2, 393225, 1835003, 2, 655369, 1835004, 2, 131081, 1835005, 2, 131081, 1835006, 2, 131081, 1835007, 2, 655369, 1769472, 2, 131081, 1769473, 2, 393225, 1769474, 2, 393225, 1769475, 2, 393225, 1769476, 2, 393225, 1769477, 2, 393225, 1769478, 2, 393225, 1769479, 2, 655369, 1769480, 2, 131081, 1769481, 2, 655369, 1769482, 2, 655369, 1769483, 2, 131081, 1769484, 2, 655369, 1769485, 2, 131081, 1769486, 2, 131081, 1769487, 2, 393225, 1769488, 2, 655369, 1769489, 2, 393225, 1769490, 2, 393225, 1769491, 2, 393225, 1769492, 2, 131081, 1769493, 2, 131081, 1769494, 2, 655369, 1769495, 2, 393225, 1769496, 2, 131081, 1769497, 2, 655369, 1769498, 2, 655369, 1769499, 2, 655369, 1769500, 2, 131081, 1769501, 2, 131081, 1769502, 2, 393225, 1769503, 2, 393225, 1769504, 2, 655369, 1769505, 2, 393225, 1769506, 2, 131081, 1769507, 2, 131081, 1769508, 2, 131081, 1769509, 2, 131081, 1769510, 2, 393225, 1769511, 2, 655369, 1769512, 2, 131081, 1769513, 2, 131081, 1769514, 2, 131081, 1769515, 2, 393225, 1769516, 2, 655369, 1769517, 2, 393225, 1769518, 2, 393225, 1769519, 2, 393225, 1769520, 2, 655369, 1769521, 2, 131081, 1769522, 2, 393225, 1769523, 2, 655369, 1769524, 2, 655369, 1769525, 2, 393225, 1769526, 2, 131081, 1769527, 2, 655369, 1769528, 2, 393225, 1769529, 2, 131081, 1769530, 2, 655369, 1769531, 2, 393225, 1769532, 2, 131081, 1769533, 2, 393225, 1769534, 2, 131081, 1769535, 2, 655369, 1769536, 2, 131081, 1769537, 2, 393225, 1769538, 2, 131081, 1769539, 2, 393225, 1769540, 2, 393225, 1769541, 2, 131081, 1769542, 2, 131081, 1769543, 2, 393225, 1769544, 2, 393225, 1769545, 2, 655369, 1769546, 2, 655369, 1769547, 2, 655371, 1900469, 2, 65544, 1900470, 2, 655369, 1900471, 2, 655369, 1900472, 2, 393225, 1900473, 2, 393225, 1900474, 2, 655369, 1900475, 2, 393225, 1900476, 2, 655369, 1900477, 2, 131081, 1900478, 2, 655369, 1900479, 2, 131081, 1900480, 2, 393225, 1900481, 2, 655369, 1900482, 2, 655369, 1900483, 2, 131081, 1900484, 2, 393225, 1900485, 2, 131081, 1900486, 2, 655369, 1900487, 2, 393225, 1900488, 2, 655369, 1900489, 2, 131081, 1900490, 2, 655369, 1900491, 2, 131081, 1900492, 2, 393225, 1900493, 2, 655369, 1900494, 2, 655369, 1900495, 2, 393225, 1900496, 2, 131081, 1900497, 2, 393225, 1900498, 2, 131081, 1900499, 2, 655369, 1900500, 2, 393225, 1900501, 2, 131081, 1900502, 2, 131081, 1900503, 2, 393225, 1900504, 2, 655369, 1900505, 2, 393225, 1900506, 2, 393225, 1900507, 2, 655369, 1900508, 2, 393225, 1900509, 2, 393225, 1900510, 2, 131081, 1900511, 2, 131081, 1900512, 2, 393225, 1900513, 2, 393225, 1900514, 2, 393225, 1900515, 2, 131081, 1900516, 2, 655369, 1900517, 2, 655369, 1900518, 2, 131081, 1900519, 2, 393225, 1900520, 2, 131081, 1900521, 2, 131081, 1900522, 2, 131081, 1900523, 2, 393225, 1900524, 2, 655369, 1900525, 2, 393225, 1900526, 2, 655369, 1900527, 2, 393225, 1900528, 2, 131081, 1900529, 2, 393225, 1900530, 2, 393225, 1900531, 2, 393225, 1900532, 2, 393225, 1900533, 2, 131081, 1900534, 2, 655369, 1900535, 2, 393225, 1900536, 2, 655369, 1900537, 2, 131081, 1900538, 2, 393225, 1900539, 2, 655369, 1900540, 2, 655369, 1900541, 2, 131081, 1900542, 2, 393225, 1900543, 2, 393225, 1835008, 2, 393225, 1835009, 2, 655369, 1835010, 2, 655369, 1835011, 2, 393225, 1835012, 2, 131081, 1835013, 2, 393225, 1835014, 2, 131081, 1835015, 2, 655369, 1835016, 2, 131081, 1835017, 2, 655369, 1835018, 2, 393225, 1835019, 2, 131081, 1835020, 2, 131081, 1835021, 2, 655369, 1835022, 2, 393225, 1835023, 2, 393225, 1835024, 2, 131081, 1835025, 2, 655369, 1835026, 2, 393225, 1835027, 2, 393225, 1835028, 2, 393225, 1835029, 2, 393225, 1835030, 2, 393225, 1835031, 2, 393225, 1835032, 2, 131081, 1835033, 2, 655369, 1835034, 2, 131081, 1835035, 2, 131081, 1835036, 2, 393225, 1835037, 2, 131081, 1835038, 2, 393225, 1835039, 2, 655369, 1835040, 2, 131081, 1835041, 2, 393225, 1835042, 2, 655369, 1835043, 2, 655369, 1835044, 2, 393225, 1835045, 2, 131081, 1835046, 2, 393225, 1835047, 2, 393225, 1835048, 2, 393225, 1835049, 2, 131081, 1835050, 2, 655369, 1835051, 2, 393225, 1835052, 2, 655369, 1835053, 2, 655369, 1835054, 2, 131081, 1835055, 2, 655369, 1835056, 2, 393225, 1835057, 2, 131081, 1835058, 2, 131081, 1835059, 2, 655369, 1835060, 2, 655369, 1835061, 2, 655369, 1835062, 2, 393225, 1835063, 2, 655369, 1835064, 2, 393225, 1835065, 2, 655369, 1835066, 2, 655369, 1835067, 2, 393225, 1835068, 2, 393225, 1835069, 2, 655369, 1835070, 2, 131081, 1835071, 2, 131081, 1835072, 2, 131081, 1835073, 2, 655369, 1835074, 2, 131081, 1835075, 2, 131081, 1835076, 2, 655369, 1835077, 2, 131081, 1835078, 2, 655369, 1835079, 2, 655369, 1835080, 2, 393225, 1835081, 2, 131081, 1835082, 2, 393225, 1835083, 2, 131083, 1966005, 2, 327688, 1966006, 2, 393225, 1966007, 2, 131081, 1966008, 2, 393225, 1966009, 2, 655369, 1966010, 2, 393225, 1966011, 2, 655369, 1966012, 2, 655369, 1966013, 2, 393225, 1966014, 2, 131081, 1966015, 2, 131081, 1966016, 2, 655369, 1966017, 2, 131081, 1966018, 2, 655369, 1966019, 2, 393225, 1966020, 2, 393225, 1966021, 2, 655369, 1966022, 2, 655369, 1966023, 2, 393225, 1966024, 2, 393225, 1966025, 2, 393225, 1966026, 2, 655369, 1966027, 2, 131081, 1966028, 2, 131081, 1966029, 2, 393225, 1966030, 2, 131081, 1966031, 2, 655369, 1966032, 2, 655369, 1966033, 2, 393225, 1966034, 2, 131081, 1966035, 2, 655369, 1966036, 2, 393225, 1966037, 2, 655369, 1966038, 2, 393225, 1966039, 2, 655369, 1966040, 2, 131081, 1966041, 2, 393225, 1966042, 2, 655369, 1966043, 2, 393225, 1966044, 2, 393225, 1966045, 2, 393225, 1966046, 2, 655369, 1966047, 2, 393225, 1966048, 2, 131081, 1966049, 2, 393225, 1966050, 2, 131081, 1966051, 2, 131081, 1966052, 2, 393225, 1966053, 2, 131081, 1966054, 2, 393225, 1966055, 2, 393225, 1966056, 2, 655369, 1966057, 2, 655369, 1966058, 2, 393225, 1966059, 2, 131081, 1966060, 2, 655369, 1966061, 2, 393225, 1966062, 2, 393225, 1966063, 2, 393225, 1966064, 2, 131081, 1966065, 2, 131081, 1966066, 2, 131081, 1966067, 2, 655369, 1966068, 2, 131081, 1966069, 2, 655369, 1966070, 2, 131081, 1966071, 2, 655369, 1966072, 2, 131081, 1966073, 2, 393225, 1966074, 2, 655369, 1966075, 2, 655369, 1966076, 2, 655369, 1966077, 2, 131081, 1966078, 2, 393225, 1966079, 2, 131081, 1900544, 2, 131081, 1900545, 2, 131081, 1900546, 2, 393225, 1900547, 2, 655369, 1900548, 2, 655369, 1900549, 2, 131081, 1900550, 2, 655369, 1900551, 2, 131081, 1900552, 2, 131081, 1900553, 2, 393225, 1900554, 2, 655369, 1900555, 2, 393225, 1900556, 2, 655369, 1900557, 2, 393225, 1900558, 2, 655369, 1900559, 2, 393225, 1900560, 2, 393225, 1900561, 2, 131081, 1900562, 2, 131081, 1900563, 2, 393225, 1900564, 2, 393225, 1900565, 2, 655369, 1900566, 2, 655369, 1900567, 2, 655369, 1900568, 2, 131081, 1900569, 2, 131081, 1900570, 2, 655369, 1900571, 2, 393225, 1900572, 2, 655369, 1900573, 2, 655369, 1900574, 2, 131081, 1900575, 2, 131081, 1900576, 2, 131081, 1900577, 2, 131081, 1900578, 2, 655369, 1900579, 2, 655369, 1900580, 2, 655369, 1900581, 2, 131081, 1900582, 2, 655369, 1900583, 2, 131081, 1900584, 2, 393225, 1900585, 2, 131081, 1900586, 2, 655369, 1900587, 2, 131081, 1900588, 2, 393225, 1900589, 2, 655369, 1900590, 2, 393225, 1900591, 2, 131081, 1900592, 2, 655369, 1900593, 2, 655369, 1900594, 2, 393225, 1900595, 2, 131081, 1900596, 2, 655369, 1900597, 2, 393225, 1900598, 2, 131081, 1900599, 2, 131081, 1900600, 2, 655369, 1900601, 2, 393225, 1900602, 2, 655369, 1900603, 2, 131081, 1900604, 2, 393225, 1900605, 2, 655369, 1900606, 2, 131081, 1900607, 2, 131081, 1900608, 2, 655369, 1900609, 2, 655369, 1900610, 2, 393225, 1900611, 2, 393225, 1900612, 2, 655369, 1900613, 2, 393225, 1900614, 2, 393225, 1900615, 2, 655369, 1900616, 2, 655369, 1900617, 2, 655369, 1900618, 2, 131081, 1900619, 2, 655371, 2031541, 2, 589832, 2031542, 2, 655369, 2031543, 2, 131081, 2031544, 2, 393225, 2031545, 2, 393225, 2031546, 2, 393225, 2031547, 2, 131081, 2031548, 2, 131081, 2031549, 2, 393225, 2031550, 2, 393225, 2031551, 2, 655369, 2031552, 2, 655369, 2031553, 2, 393225, 2031554, 2, 393225, 2031555, 2, 393225, 2031556, 2, 655369, 2031557, 2, 655369, 2031558, 2, 393225, 2031559, 2, 393225, 2031560, 2, 393225, 2031561, 2, 393225, 2031562, 2, 131081, 2031563, 2, 655369, 2031564, 2, 393225, 2031565, 2, 131081, 2031566, 2, 655369, 2031567, 2, 393225, 2031568, 2, 131081, 2031569, 2, 655369, 2031570, 2, 655369, 2031571, 2, 131081, 2031572, 2, 393225, 2031573, 2, 131081, 2031574, 2, 655369, 2031575, 2, 393225, 2031576, 2, 393225, 2031577, 2, 131081, 2031578, 2, 131081, 2031579, 2, 655369, 2031580, 2, 131081, 2031581, 2, 655369, 2031582, 2, 393225, 2031583, 2, 131081, 2031584, 2, 393225, 2031585, 2, 131081, 2031586, 2, 131081, 2031587, 2, 131081, 2031588, 2, 393225, 2031589, 2, 393225, 2031590, 2, 393225, 2031591, 2, 131081, 2031592, 2, 655369, 2031593, 2, 393225, 2031594, 2, 393225, 2031595, 2, 655369, 2031596, 2, 131081, 2031597, 2, 655369, 2031598, 2, 393225, 2031599, 2, 131081, 2031600, 2, 655369, 2031601, 2, 393225, 2031602, 2, 655369, 2031603, 2, 393225, 2031604, 2, 393225, 2031605, 2, 655369, 2031606, 2, 655369, 2031607, 2, 131081, 2031608, 2, 393225, 2031609, 2, 393225, 2031610, 2, 655369, 2031611, 2, 131081, 2031612, 2, 131081, 2031613, 2, 655369, 2031614, 2, 393225, 2031615, 2, 655369, 1966080, 2, 131081, 1966081, 2, 393225, 1966082, 2, 131081, 1966083, 2, 393225, 1966084, 2, 131081, 1966085, 2, 655369, 1966086, 2, 393225, 1966087, 2, 655369, 1966088, 2, 393225, 1966089, 2, 393225, 1966090, 2, 655369, 1966091, 2, 655369, 1966092, 2, 393225, 1966093, 2, 655369, 1966094, 2, 131081, 1966095, 2, 131081, 1966096, 2, 655369, 1966097, 2, 655369, 1966098, 2, 655369, 1966099, 2, 655369, 1966100, 2, 655369, 1966101, 2, 131081, 1966102, 2, 393225, 1966103, 2, 655369, 1966104, 2, 131081, 1966105, 2, 655369, 1966106, 2, 393225, 1966107, 2, 655369, 1966108, 2, 393225, 1966109, 2, 393225, 1966110, 2, 655369, 1966111, 2, 393225, 1966112, 2, 655369, 1966113, 2, 655369, 1966114, 2, 655369, 1966115, 2, 131081, 1966116, 2, 131081, 1966117, 2, 655369, 1966118, 2, 131081, 1966119, 2, 393225, 1966120, 2, 655369, 1966121, 2, 655369, 1966122, 2, 655369, 1966123, 2, 131081, 1966124, 2, 655369, 1966125, 2, 131081, 1966126, 2, 131081, 1966127, 2, 655369, 1966128, 2, 131081, 1966129, 2, 131081, 1966130, 2, 393225, 1966131, 2, 655369, 1966132, 2, 393225, 1966133, 2, 131081, 1966134, 2, 655369, 1966135, 2, 655369, 1966136, 2, 655369, 1966137, 2, 131081, 1966138, 2, 655369, 1966139, 2, 393225, 1966140, 2, 131081, 1966141, 2, 393225, 1966142, 2, 131081, 1966143, 2, 655369, 1966144, 2, 655369, 1966145, 2, 655369, 1966146, 2, 131081, 1966147, 2, 655369, 1966148, 2, 131081, 1966149, 2, 393225, 1966150, 2, 655369, 1966151, 2, 655369, 1966152, 2, 131081, 1966153, 2, 393225, 1966154, 2, 655369, 1966155, 2, 131083, 2097077, 2, 327688, 2097078, 2, 131081, 2097079, 2, 655369, 2097080, 2, 393225, 2097081, 2, 131081, 2097082, 2, 655369, 2097083, 2, 393225, 2097084, 2, 655369, 2097085, 2, 393225, 2097086, 2, 655369, 2097087, 2, 131081, 2097088, 2, 393225, 2097089, 2, 131081, 2097090, 2, 393225, 2097091, 2, 131081, 2097092, 2, 131081, 2097093, 2, 131081, 2097094, 2, 655369, 2097095, 2, 655369, 2097096, 2, 131081, 2097097, 2, 655369, 2097098, 2, 655369, 2097099, 2, 131081, 2097100, 2, 131081, 2097101, 2, 131081, 2097102, 2, 393225, 2097103, 2, 655369, 2097104, 2, 393225, 2097105, 2, 393225, 2097106, 2, 131081, 2097107, 2, 131081, 2097108, 2, 131081, 2097109, 2, 655369, 2097110, 2, 131081, 2097111, 2, 655369, 2097112, 2, 131081, 2097113, 2, 131081, 2097114, 2, 393225, 2097115, 2, 393225, 2097116, 2, 393225, 2097117, 2, 393225, 2097118, 2, 131081, 2097119, 2, 655369, 2097120, 2, 393225, 2097121, 2, 131081, 2097122, 2, 655369, 2097123, 2, 393225, 2097124, 2, 393225, 2097125, 2, 393225, 2097126, 2, 393225, 2097127, 2, 655369, 2097128, 2, 131081, 2097129, 2, 393225, 2097130, 2, 393225, 2097131, 2, 655369, 2097132, 2, 131081, 2097133, 2, 393225, 2097134, 2, 655369, 2097135, 2, 131081, 2097136, 2, 393225, 2097137, 2, 131081, 2097138, 2, 393225, 2097139, 2, 131081, 2097140, 2, 655369, 2097141, 2, 393225, 2097142, 2, 131081, 2097143, 2, 131081, 2097144, 2, 393225, 2097145, 2, 655369, 2097146, 2, 393225, 2097147, 2, 393225, 2097148, 2, 393225, 2097149, 2, 131081, 2097150, 2, 655369, 2097151, 2, 393225, 2031616, 2, 393225, 2031617, 2, 655369, 2031618, 2, 655369, 2031619, 2, 655369, 2031620, 2, 131081, 2031621, 2, 393225, 2031622, 2, 393225, 2031623, 2, 131081, 2031624, 2, 393225, 2031625, 2, 131081, 2031626, 2, 131081, 2031627, 2, 131081, 2031628, 2, 655369, 2031629, 2, 131081, 2031630, 2, 393225, 2031631, 2, 131081, 2031632, 2, 655369, 2031633, 2, 393225, 2031634, 2, 131081, 2031635, 2, 655369, 2031636, 2, 393225, 2031637, 2, 131081, 2031638, 2, 393225, 2031639, 2, 393225, 2031640, 2, 655369, 2031641, 2, 393225, 2031642, 2, 131081, 2031643, 2, 655369, 2031644, 2, 655369, 2031645, 2, 131081, 2031646, 2, 131081, 2031647, 2, 655369, 2031648, 2, 131081, 2031649, 2, 131081, 2031650, 2, 655369, 2031651, 2, 131081, 2031652, 2, 393225, 2031653, 2, 655369, 2031654, 2, 655369, 2031655, 2, 393225, 2031656, 2, 131081, 2031657, 2, 393225, 2031658, 2, 393225, 2031659, 2, 131081, 2031660, 2, 131081, 2031661, 2, 655369, 2031662, 2, 655369, 2031663, 2, 655369, 2031664, 2, 655369, 2031665, 2, 655369, 2031666, 2, 655369, 2031667, 2, 655369, 2031668, 2, 655369, 2031669, 2, 655369, 2031670, 2, 393225, 2031671, 2, 655369, 2031672, 2, 655369, 2031673, 2, 393225, 2031674, 2, 655369, 2031675, 2, 393225, 2031676, 2, 655369, 2031677, 2, 655369, 2031678, 2, 393225, 2031679, 2, 393225, 2031680, 2, 393225, 2031681, 2, 655369, 2031682, 2, 655369, 2031683, 2, 131081, 2031684, 2, 393225, 2031685, 2, 393225, 2031686, 2, 131081, 2031687, 2, 131081, 2031688, 2, 131081, 2031689, 2, 655369, 2031690, 2, 393225, 2031691, 2, 655371, 2162613, 2, 65544, 2162614, 2, 393225, 2162615, 2, 393225, 2162616, 2, 131081, 2162617, 2, 655369, 2162618, 2, 655369, 2162619, 2, 393225, 2162620, 2, 655369, 2162621, 2, 393225, 2162622, 2, 655369, 2162623, 2, 393225, 2162624, 2, 655369, 2162625, 2, 655369, 2162626, 2, 393225, 2162627, 2, 393225, 2162628, 2, 655369, 2162629, 2, 655369, 2162630, 2, 131081, 2162631, 2, 655369, 2162632, 2, 131081, 2162633, 2, 131081, 2162634, 2, 655369, 2162635, 2, 393225, 2162636, 2, 131081, 2162637, 2, 655369, 2162638, 2, 393225, 2162639, 2, 131081, 2162640, 2, 393225, 2162641, 2, 655369, 2162642, 2, 393225, 2162643, 2, 393225, 2162644, 2, 131081, 2162645, 2, 655369, 2162646, 2, 131081, 2162647, 2, 655369, 2162648, 2, 655369, 2162649, 2, 131081, 2162650, 2, 131081, 2162651, 2, 655369, 2162652, 2, 655369, 2162653, 2, 393225, 2162654, 2, 393225, 2162655, 2, 393225, 2162656, 2, 655369, 2162657, 2, 393225, 2162658, 2, 655369, 2162659, 2, 131081, 2162660, 2, 393225, 2162661, 2, 393225, 2162662, 2, 655369, 2162663, 2, 655369, 2162664, 2, 131081, 2162665, 2, 131081, 2162666, 2, 393225, 2162667, 2, 655369, 2162668, 2, 393225, 2162669, 2, 131081, 2162670, 2, 393225, 2162671, 2, 393225, 2162672, 2, 131081, 2162673, 2, 655369, 2162674, 2, 393225, 2162675, 2, 655369, 2162676, 2, 655369, 2162677, 2, 655369, 2162678, 2, 131081, 2162679, 2, 131081, 2162680, 2, 393225, 2162681, 2, 131081, 2162682, 2, 655369, 2162683, 2, 393225, 2162684, 2, 655369, 2162685, 2, 393225, 2162686, 2, 393225, 2162687, 2, 655369, 2097152, 2, 131081, 2097153, 2, 131081, 2097154, 2, 655369, 2097155, 2, 655369, 2097156, 2, 393225, 2097157, 2, 131081, 2097158, 2, 393225, 2097159, 2, 655369, 2097160, 2, 393225, 2097161, 2, 131081, 2097162, 2, 131081, 2097163, 2, 393225, 2097164, 2, 655369, 2097165, 2, 131081, 2097166, 2, 393225, 2097167, 2, 131081, 2097168, 2, 655369, 2097169, 2, 131081, 2097170, 2, 655369, 2097171, 2, 655369, 2097172, 2, 393225, 2097173, 2, 655369, 2097174, 2, 393225, 2097175, 2, 393225, 2097176, 2, 393225, 2097177, 2, 655369, 2097178, 2, 131081, 2097179, 2, 393225, 2097180, 2, 393225, 2097181, 2, 131081, 2097182, 2, 393225, 2097183, 2, 393225, 2097184, 2, 655369, 2097185, 2, 131081, 2097186, 2, 393225, 2097187, 2, 131081, 2097188, 2, 655369, 2097189, 2, 655369, 2097190, 2, 131081, 2097191, 2, 131081, 2097192, 2, 655369, 2097193, 2, 655369, 2097194, 2, 655369, 2097195, 2, 131081, 2097196, 2, 655369, 2097197, 2, 131081, 2097198, 2, 131081, 2097199, 2, 131081, 2097200, 2, 655369, 2097201, 2, 393225, 2097202, 2, 655369, 2097203, 2, 655369, 2097204, 2, 393225, 2097205, 2, 131081, 2097206, 2, 393225, 2097207, 2, 393225, 2097208, 2, 655369, 2097209, 2, 131081, 2097210, 2, 655369, 2097211, 2, 131081, 2097212, 2, 393225, 2097213, 2, 655369, 2097214, 2, 655369, 2097215, 2, 655369, 2097216, 2, 131081, 2097217, 2, 131081, 2097218, 2, 655369, 2097219, 2, 655369, 2097220, 2, 131081, 2097221, 2, 655369, 2097222, 2, 393225, 2097223, 2, 655369, 2097224, 2, 393225, 2097225, 2, 655369, 2097226, 2, 393225, 2097227, 2, 393227, 2228149, 2, 327688, 2228150, 2, 655369, 2228151, 2, 393225, 2228152, 2, 131081, 2228153, 2, 393225, 2228154, 2, 131081, 2228155, 2, 655369, 2228156, 2, 131081, 2228157, 2, 393225, 2228158, 2, 655369, 2228159, 2, 393225, 2228160, 2, 655369, 2228161, 2, 393225, 2228162, 2, 655369, 2228163, 2, 655369, 2228164, 2, 655369, 2228165, 2, 393225, 2228166, 2, 131081, 2228167, 2, 655369, 2228168, 2, 131081, 2228169, 2, 393225, 2228170, 2, 393225, 2228171, 2, 131081, 2228172, 2, 393225, 2228173, 2, 655369, 2228174, 2, 655369, 2228175, 2, 131081, 2228176, 2, 393225, 2228177, 2, 655369, 2228178, 2, 393225, 2228179, 2, 131081, 2228180, 2, 393225, 2228181, 2, 655369, 2228182, 2, 393225, 2228183, 2, 393225, 2228184, 2, 655369, 2228185, 2, 393225, 2228186, 2, 655369, 2228187, 2, 655369, 2228188, 2, 131081, 2228189, 2, 393225, 2228190, 2, 131081, 2228191, 2, 655369, 2228192, 2, 655369, 2228193, 2, 655369, 2228194, 2, 655369, 2228195, 2, 393225, 2228196, 2, 655369, 2228197, 2, 131081, 2228198, 2, 393225, 2228199, 2, 393225, 2228200, 2, 131081, 2228201, 2, 393225, 2228202, 2, 131081, 2228203, 2, 655369, 2228204, 2, 655369, 2228205, 2, 655369, 2228206, 2, 131081, 2228207, 2, 393225, 2228208, 2, 131081, 2228209, 2, 655369, 2228210, 2, 655369, 2228211, 2, 393225, 2228212, 2, 393225, 2228213, 2, 655369, 2228214, 2, 393225, 2228215, 2, 393225, 2228216, 2, 393225, 2228217, 2, 655369, 2228218, 2, 655369, 2228219, 2, 393225, 2228220, 2, 655369, 2228221, 2, 393225, 2228222, 2, 393225, 2228223, 2, 393225, 2162688, 2, 131081, 2162689, 2, 655369, 2162690, 2, 655369, 2162691, 2, 655369, 2162692, 2, 655369, 2162693, 2, 131081, 2162694, 2, 655369, 2162695, 2, 393225, 2162696, 2, 655369, 2162697, 2, 655369, 2162698, 2, 131081, 2162699, 2, 131081, 2162700, 2, 393225, 2162701, 2, 131081, 2162702, 2, 655369, 2162703, 2, 131081, 2162704, 2, 655369, 2162705, 2, 393225, 2162706, 2, 131081, 2162707, 2, 131081, 2162708, 2, 393225, 2162709, 2, 393225, 2162710, 2, 131081, 2162711, 2, 655369, 2162712, 2, 393225, 2162713, 2, 655369, 2162714, 2, 393225, 2162715, 2, 131081, 2162716, 2, 131081, 2162717, 2, 131081, 2162718, 2, 131081, 2162719, 2, 393225, 2162720, 2, 393225, 2162721, 2, 393225, 2162722, 2, 393225, 2162723, 2, 655369, 2162724, 2, 655369, 2162725, 2, 393225, 2162726, 2, 393225, 2162727, 2, 131081, 2162728, 2, 655369, 2162729, 2, 131081, 2162730, 2, 131081, 2162731, 2, 393225, 2162732, 2, 131081, 2162733, 2, 393225, 2162734, 2, 131081, 2162735, 2, 131081, 2162736, 2, 393225, 2162737, 2, 655369, 2162738, 2, 393225, 2162739, 2, 131081, 2162740, 2, 393225, 2162741, 2, 393225, 2162742, 2, 655369, 2162743, 2, 131081, 2162744, 2, 393225, 2162745, 2, 655369, 2162746, 2, 131081, 2162747, 2, 131081, 2162748, 2, 393225, 2162749, 2, 393225, 2162750, 2, 393225, 2162751, 2, 131081, 2162752, 2, 131081, 2162753, 2, 131081, 2162754, 2, 393225, 2162755, 2, 393225, 2162756, 2, 131081, 2162757, 2, 655369, 2162758, 2, 655369, 2162759, 2, 131081, 2162760, 2, 393225, 2162761, 2, 131081, 2162762, 2, 393225, 2162763, 2, 655371, 2293685, 2, 196616, 2293686, 2, 458761, 2293687, 2, 458761, 2293688, 2, 720905, 2293689, 2, 720905, 2293690, 2, 196617, 2293691, 2, 458761, 2293692, 2, 720905, 2293693, 2, 720905, 2293694, 2, 720905, 2293695, 2, 196617, 2293696, 2, 196617, 2293697, 2, 196617, 2293698, 2, 196617, 2293699, 2, 720905, 2293700, 2, 720905, 2293701, 2, 720905, 2293702, 2, 196617, 2293703, 2, 196617, 2293704, 2, 196617, 2293705, 2, 458761, 2293706, 2, 720905, 2293707, 2, 196617, 2293708, 2, 720905, 2293709, 2, 458761, 2293710, 2, 720905, 2293711, 2, 196617, 2293712, 2, 458761, 2293713, 2, 458761, 2293714, 2, 458761, 2293715, 2, 458761, 2293716, 2, 196617, 2293717, 2, 458761, 2293718, 2, 458761, 2293719, 2, 720905, 2293720, 2, 196617, 2293721, 2, 720905, 2293722, 2, 458761, 2293723, 2, 458761, 2293724, 2, 458761, 2293725, 2, 196617, 2293726, 2, 196617, 2293727, 2, 458761, 2293728, 2, 458761, 2293729, 2, 720905, 2293730, 2, 720905, 2293731, 2, 720905, 2293732, 2, 720905, 2293733, 2, 196617, 2293734, 2, 458761, 2293735, 2, 720905, 2293736, 2, 196617, 2293737, 2, 458761, 2293738, 2, 196617, 2293739, 2, 196617, 2293740, 2, 196617, 2293741, 2, 720905, 2293742, 2, 196617, 2293743, 2, 196617, 2293744, 2, 458761, 2293745, 2, 196617, 2293746, 2, 720905, 2293747, 2, 196617, 2293748, 2, 720905, 2293749, 2, 196617, 2293750, 2, 458761, 2293751, 2, 458761, 2293752, 2, 458761, 2293753, 2, 196617, 2293754, 2, 720905, 2293755, 2, 720905, 2293756, 2, 458761, 2293757, 2, 196617, 2293758, 2, 458761, 2293759, 2, 458761, 2228224, 2, 196617, 2228225, 2, 458761, 2228226, 2, 196617, 2228227, 2, 196617, 2228228, 2, 458761, 2228229, 2, 458761, 2228230, 2, 196617, 2228231, 2, 196617, 2228232, 2, 458761, 2228233, 2, 458761, 2228234, 2, 720905, 2228235, 2, 196617, 2228236, 2, 720905, 2228237, 2, 720905, 2228238, 2, 720905, 2228239, 2, 720905, 2228240, 2, 458761, 2228241, 2, 196617, 2228242, 2, 196617, 2228243, 2, 720905, 2228244, 2, 196617, 2228245, 2, 720905, 2228246, 2, 720905, 2228247, 2, 458761, 2228248, 2, 196617, 2228249, 2, 196617, 2228250, 2, 458761, 2228251, 2, 720905, 2228252, 2, 720905, 2228253, 2, 458761, 2228254, 2, 720905, 2228255, 2, 196617, 2228256, 2, 458761, 2228257, 2, 458761, 2228258, 2, 458761, 2228259, 2, 196617, 2228260, 2, 196617, 2228261, 2, 196617, 2228262, 2, 458761, 2228263, 2, 458761, 2228264, 2, 196617, 2228265, 2, 720905, 2228266, 2, 196617, 2228267, 2, 720905, 2228268, 2, 720905, 2228269, 2, 458761, 2228270, 2, 196617, 2228271, 2, 458761, 2228272, 2, 196617, 2228273, 2, 196617, 2228274, 2, 196617, 2228275, 2, 458761, 2228276, 2, 720905, 2228277, 2, 458761, 2228278, 2, 196617, 2228279, 2, 196617, 2228280, 2, 720905, 2228281, 2, 720905, 2228282, 2, 720905, 2228283, 2, 196617, 2228284, 2, 196617, 2228285, 2, 720905, 2228286, 2, 458761, 2228287, 2, 458761, 2228288, 2, 720905, 2228289, 2, 458761, 2228290, 2, 458761, 2228291, 2, 196617, 2228292, 2, 720905, 2228293, 2, 720905, 2228294, 2, 720905, 2228295, 2, 720905, 2228296, 2, 458761, 2228297, 2, 720905, 2228298, 2, 196617, 2228299, 2, 196619 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transition" type="CanvasLayer" parent="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Transition"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Transition"]
+anims/RESET = SubResource( 44 )
+anims/fade_in = SubResource( 45 )
+anims/fade_out = SubResource( 43 )
+
+[node name="SpeedrunTimer" type="Label" parent="CanvasLayer"]
+visible = false
+margin_left = 20.0
+margin_top = 10.0
+theme = ExtResource( 47 )
+align = 3
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HP" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/HP"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -160.0
+margin_bottom = -100.0
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+custom_fonts/font = SubResource( 139 )
+text = "Amduat and Nehebkau"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/HP"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 360.0
+margin_top = -105.0
+margin_right = -360.0
+margin_bottom = 20.0
+rect_scale = Vector2( 1, 0.5 )
+theme = SubResource( 138 )
+max_value = 2300.0
+value = 2300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="ColorRect" parent="CanvasLayer/HP"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 783.0
+margin_top = -93.0
+margin_right = -1135.0
+margin_bottom = -55.0
+color = Color( 0.768627, 0.768627, 0.768627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="ColorRect" parent="CanvasLayer/HP"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1132.0
+margin_top = -93.0
+margin_right = -786.0
+margin_bottom = -55.0
+color = Color( 0.768627, 0.768627, 0.768627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Warning" type="Label" parent="CanvasLayer"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -311.0
+margin_top = -29.0
+margin_right = 311.0
+margin_bottom = 29.0
+theme = ExtResource( 47 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 0 )
+text = "The Fog Beckons. . ."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Trigger" type="Label" parent="CanvasLayer"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -328.5
+margin_top = -29.0
+margin_right = 328.5
+margin_bottom = 29.0
+theme = ExtResource( 47 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 0 )
+text = "Welcome The Fog."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Trigger2" type="Label" parent="CanvasLayer"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.0
+margin_top = -29.0
+margin_right = 130.0
+margin_bottom = 29.0
+theme = ExtResource( 47 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 0 )
+text = "You Are Out Of Time."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bog" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Bog"]
+material = SubResource( 164 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TheBog" type="AudioStreamPlayer" parent="Bog"]
+stream = ExtResource( 49 )
+volume_db = 5.0
+bus = "SFX"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource( 6 )]
+
+[node name="Endscreen" parent="." instance=ExtResource( 20 )]
+
+[node name="Music" type="Node" parent="."]
+script = ExtResource( 12 )
+
+[node name="Background1" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 11 )
+volume_db = -15.0
+bus = "Music"
+
+[node name="Background2" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 31 )
+volume_db = -10.0
+bus = "Music"
+
+[node name="EndMusic" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 45 )
+volume_db = -7.0
+pitch_scale = 0.8
+bus = "Music"
+
+[node name="Boss" type="Node2D" parent="."]
+
+[node name="Peppah" type="KinematicBody2D" parent="Boss"]
+position = Vector2( 385, 186 )
+script = ExtResource( 36 )
+
+[node name="PeppahSprite" type="AnimatedSprite" parent="Boss/Peppah"]
+frames = SubResource( 614 )
+frame = 2
+playing = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boss/Peppah"]
+position = Vector2( 0, -17 )
+shape = SubResource( 98 )
+
+[node name="Area2D" type="Area2D" parent="Boss/Peppah"]
+position = Vector2( 0, 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Peppah/Area2D"]
+position = Vector2( 0, -34 )
+shape = SubResource( 102 )
+
+[node name="Timer" type="Timer" parent="Boss/Peppah"]
+wait_time = 2.0
+one_shot = true
+
+[node name="ChargingTimer" type="Timer" parent="Boss/Peppah"]
+wait_time = 6.0
+one_shot = true
+
+[node name="BloodParticles" type="Particles2D" parent="Boss/Peppah"]
+emitting = false
+amount = 50
+lifetime = 2.0
+explosiveness = 0.2
+local_coords = false
+process_material = SubResource( 124 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Boss/Peppah"]
+volume_db = -10.0
+attenuation = 0.5
+bus = "SFX"
+
+[node name="Blip" type="AudioStreamPlayer" parent="Boss/Peppah"]
+stream = ExtResource( 74 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="Particles2D" type="Particles2D" parent="Boss/Peppah"]
+position = Vector2( 0, 23 )
+emitting = false
+amount = 100
+lifetime = 0.95
+one_shot = true
+explosiveness = 0.8
+local_coords = false
+process_material = SubResource( 177 )
+
+[node name="crash1" type="AudioStreamPlayer2D" parent="Boss/Peppah"]
+stream = ExtResource( 69 )
+volume_db = -7.0
+pitch_scale = 0.8
+bus = "SFX"
+
+[node name="crash2" type="AudioStreamPlayer2D" parent="Boss/Peppah"]
+stream = ExtResource( 70 )
+volume_db = -7.0
+pitch_scale = 0.8
+bus = "SFX"
+
+[node name="crash3" type="AudioStreamPlayer2D" parent="Boss/Peppah"]
+stream = ExtResource( 71 )
+volume_db = -7.0
+pitch_scale = 0.8
+bus = "SFX"
+
+[node name="crash4" type="AudioStreamPlayer2D" parent="Boss/Peppah"]
+stream = ExtResource( 72 )
+volume_db = -7.0
+pitch_scale = 0.8
+bus = "SFX"
+
+[node name="crash5" type="AudioStreamPlayer2D" parent="Boss/Peppah"]
+stream = ExtResource( 73 )
+volume_db = -7.0
+pitch_scale = 0.8
+bus = "SFX"
+
+[node name="commence" type="AudioStreamPlayer2D" parent="Boss/Peppah"]
+stream = ExtResource( 75 )
+bus = "SFX"
+
+[node name="Nina" type="KinematicBody2D" parent="Boss"]
+position = Vector2( 0, 96 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 5 )
+
+[node name="BogParticles2" type="Particles2D" parent="Boss/Nina"]
+amount = 1
+lifetime = 7.0
+local_coords = false
+process_material = SubResource( 174 )
+texture = ExtResource( 50 )
+
+[node name="ChargingParticles" type="Particles2D" parent="Boss/Nina"]
+material = SubResource( 108 )
+position = Vector2( 0, -60 )
+emitting = false
+amount = 10
+lifetime = 2.0
+process_material = SubResource( 107 )
+texture = ExtResource( 39 )
+normal_map = ExtResource( 40 )
+
+[node name="NinaSprite" type="Sprite" parent="Boss/Nina"]
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 13 )
+
+[node name="RPeppah" type="Particles2D" parent="Boss/Nina"]
+position = Vector2( 25, 0 )
+emitting = false
+amount = 50
+one_shot = true
+explosiveness = 0.5
+process_material = SubResource( 99 )
+
+[node name="LPeppah" type="Particles2D" parent="Boss/Nina"]
+position = Vector2( -25, 0 )
+emitting = false
+amount = 50
+one_shot = true
+explosiveness = 0.5
+process_material = SubResource( 99 )
+
+[node name="Timer0" type="Timer" parent="Boss/Nina"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Timer1" type="Timer" parent="Boss/Nina"]
+wait_time = 1.2
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="Boss/Nina"]
+wait_time = 0.6
+one_shot = true
+
+[node name="Timer3" type="Timer" parent="Boss/Nina"]
+wait_time = 0.3
+one_shot = true
+
+[node name="Timer4" type="Timer" parent="Boss/Nina"]
+wait_time = 0.1
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Nina"]
+shape = SubResource( 605 )
+
+[node name="HealingTimer" type="Timer" parent="Boss/Nina"]
+wait_time = 7.0
+one_shot = true
+
+[node name="HealingParticles" type="Particles2D" parent="Boss/Nina"]
+visible = false
+material = SubResource( 125 )
+emitting = false
+amount = 3
+lifetime = 3.0
+process_material = SubResource( 132 )
+texture = ExtResource( 39 )
+normal_map = ExtResource( 40 )
+
+[node name="StunTimer" type="Timer" parent="Boss/Nina"]
+wait_time = 5.0
+one_shot = true
+
+[node name="HitArea2D" type="Area2D" parent="Boss/Nina"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Nina/HitArea2D"]
+shape = SubResource( 606 )
+
+[node name="HitTimer" type="Timer" parent="Boss/Nina"]
+wait_time = 0.1
+one_shot = true
+
+[node name="TooLongTimer" type="Timer" parent="Boss/Nina"]
+wait_time = 4096.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Boss/Nina"]
+stream = ExtResource( 19 )
+volume_db = -10.0
+pitch_scale = 2.0
+bus = "SFX"
+
+[node name="WinTimer" type="Timer" parent="Boss/Nina"]
+wait_time = 10.0
+one_shot = true
+
+[node name="No" type="AudioStreamPlayer2D" parent="Boss/Nina"]
+stream = ExtResource( 26 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="SEB" type="AudioStreamPlayer2D" parent="Boss/Nina"]
+pitch_scale = 0.9
+bus = "SFX"
+
+[node name="Laughing" type="AudioStreamPlayer2D" parent="Boss/Nina"]
+stream = ExtResource( 23 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="WinTimerShort" type="Timer" parent="Boss/Nina"]
+one_shot = true
+
+[node name="SFX" type="Node" parent="Boss/Nina"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="Boss/Nina/SFX"]
+stream = ExtResource( 58 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer" parent="Boss/Nina/SFX"]
+stream = ExtResource( 59 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer" parent="Boss/Nina/SFX"]
+stream = ExtResource( 56 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer" parent="Boss/Nina/SFX"]
+stream = ExtResource( 57 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="AudioStreamPlayer2D5" type="AudioStreamPlayer" parent="Boss/Nina/SFX"]
+stream = ExtResource( 55 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="Arena" type="Area2D" parent="Boss"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Arena"]
+position = Vector2( 240, 104 )
+shape = SubResource( 101 )
+
+[node name="Runes" type="Node2D" parent="."]
+position = Vector2( 0, 16 )
+script = ExtResource( 38 )
+
+[node name="RuneL1" type="Sprite" parent="Runes"]
+position = Vector2( -224, 129 )
+texture = ExtResource( 25 )
+
+[node name="BlueParticles" type="Particles2D" parent="Runes/RuneL1"]
+emitting = false
+amount = 20
+lifetime = 0.5
+process_material = SubResource( 299 )
+
+[node name="Blue2Particles" type="Particles2D" parent="Runes/RuneL1"]
+emitting = false
+amount = 100
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 297 )
+
+[node name="DestroyParticles" type="Particles2D" parent="Runes/RuneL1"]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 300 )
+
+[node name="WrongParticles" type="Particles2D" parent="Runes/RuneL1"]
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 302 )
+
+[node name="AreaL1" type="Area2D" parent="Runes/RuneL1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Runes/RuneL1/AreaL1"]
+shape = SubResource( 115 )
+
+[node name="RuneL2" type="Sprite" parent="Runes"]
+position = Vector2( -192, 129 )
+texture = ExtResource( 24 )
+
+[node name="BlueParticles" type="Particles2D" parent="Runes/RuneL2"]
+emitting = false
+amount = 20
+lifetime = 0.5
+process_material = SubResource( 299 )
+
+[node name="Blue2Particles" type="Particles2D" parent="Runes/RuneL2"]
+emitting = false
+amount = 100
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 297 )
+
+[node name="DestroyParticles" type="Particles2D" parent="Runes/RuneL2"]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 300 )
+
+[node name="WrongParticles" type="Particles2D" parent="Runes/RuneL2"]
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 302 )
+
+[node name="AreaL2" type="Area2D" parent="Runes/RuneL2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Runes/RuneL2/AreaL2"]
+shape = SubResource( 115 )
+
+[node name="RuneL3" type="Sprite" parent="Runes"]
+position = Vector2( -160, 129 )
+texture = ExtResource( 30 )
+
+[node name="BlueParticles" type="Particles2D" parent="Runes/RuneL3"]
+emitting = false
+amount = 20
+lifetime = 0.5
+process_material = SubResource( 299 )
+
+[node name="Blue2Particles" type="Particles2D" parent="Runes/RuneL3"]
+emitting = false
+amount = 100
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 297 )
+
+[node name="DestroyParticles" type="Particles2D" parent="Runes/RuneL3"]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 300 )
+
+[node name="WrongParticles" type="Particles2D" parent="Runes/RuneL3"]
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 302 )
+
+[node name="AreaL3" type="Area2D" parent="Runes/RuneL3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Runes/RuneL3/AreaL3"]
+shape = SubResource( 115 )
+
+[node name="RuneL4" type="Sprite" parent="Runes"]
+position = Vector2( -128, 129 )
+texture = ExtResource( 28 )
+
+[node name="BlueParticles" type="Particles2D" parent="Runes/RuneL4"]
+emitting = false
+amount = 20
+lifetime = 0.5
+process_material = SubResource( 299 )
+
+[node name="Blue2Particles" type="Particles2D" parent="Runes/RuneL4"]
+emitting = false
+amount = 100
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 297 )
+
+[node name="DestroyParticles" type="Particles2D" parent="Runes/RuneL4"]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 300 )
+
+[node name="WrongParticles" type="Particles2D" parent="Runes/RuneL4"]
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 302 )
+
+[node name="AreaL4" type="Area2D" parent="Runes/RuneL4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Runes/RuneL4/AreaL4"]
+shape = SubResource( 115 )
+
+[node name="RuneL5" type="Sprite" parent="Runes"]
+position = Vector2( -96, 129 )
+texture = ExtResource( 29 )
+
+[node name="BlueParticles" type="Particles2D" parent="Runes/RuneL5"]
+emitting = false
+amount = 20
+lifetime = 0.5
+process_material = SubResource( 299 )
+
+[node name="Blue2Particles" type="Particles2D" parent="Runes/RuneL5"]
+emitting = false
+amount = 100
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 297 )
+
+[node name="DestroyParticles" type="Particles2D" parent="Runes/RuneL5"]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 300 )
+
+[node name="WrongParticles" type="Particles2D" parent="Runes/RuneL5"]
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 302 )
+
+[node name="AreaL5" type="Area2D" parent="Runes/RuneL5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Runes/RuneL5/AreaL5"]
+shape = SubResource( 115 )
+
+[node name="RuneR1" type="Sprite" parent="Runes"]
+position = Vector2( 95, 129 )
+texture = ExtResource( 33 )
+
+[node name="BlueParticles" type="Particles2D" parent="Runes/RuneR1"]
+emitting = false
+amount = 20
+lifetime = 0.5
+process_material = SubResource( 299 )
+
+[node name="Blue2Particles" type="Particles2D" parent="Runes/RuneR1"]
+emitting = false
+amount = 100
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 297 )
+
+[node name="DestroyParticles" type="Particles2D" parent="Runes/RuneR1"]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 300 )
+
+[node name="WrongParticles" type="Particles2D" parent="Runes/RuneR1"]
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 302 )
+
+[node name="AreaR1" type="Area2D" parent="Runes/RuneR1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Runes/RuneR1/AreaR1"]
+shape = SubResource( 115 )
+
+[node name="RuneR2" type="Sprite" parent="Runes"]
+position = Vector2( 127, 129 )
+texture = ExtResource( 34 )
+
+[node name="BlueParticles" type="Particles2D" parent="Runes/RuneR2"]
+emitting = false
+amount = 20
+lifetime = 0.5
+process_material = SubResource( 299 )
+
+[node name="Blue2Particles" type="Particles2D" parent="Runes/RuneR2"]
+emitting = false
+amount = 100
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 297 )
+
+[node name="DestroyParticles" type="Particles2D" parent="Runes/RuneR2"]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 300 )
+
+[node name="WrongParticles" type="Particles2D" parent="Runes/RuneR2"]
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 302 )
+
+[node name="AreaR2" type="Area2D" parent="Runes/RuneR2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Runes/RuneR2/AreaR2"]
+shape = SubResource( 115 )
+
+[node name="RuneR3" type="Sprite" parent="Runes"]
+position = Vector2( 159, 129 )
+texture = ExtResource( 32 )
+
+[node name="BlueParticles" type="Particles2D" parent="Runes/RuneR3"]
+emitting = false
+amount = 20
+lifetime = 0.5
+process_material = SubResource( 299 )
+
+[node name="Blue2Particles" type="Particles2D" parent="Runes/RuneR3"]
+emitting = false
+amount = 100
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 297 )
+
+[node name="DestroyParticles" type="Particles2D" parent="Runes/RuneR3"]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 300 )
+
+[node name="WrongParticles" type="Particles2D" parent="Runes/RuneR3"]
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 302 )
+
+[node name="AreaR3" type="Area2D" parent="Runes/RuneR3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Runes/RuneR3/AreaR3"]
+shape = SubResource( 115 )
+
+[node name="RuneR4" type="Sprite" parent="Runes"]
+position = Vector2( 191, 129 )
+texture = ExtResource( 27 )
+
+[node name="BlueParticles" type="Particles2D" parent="Runes/RuneR4"]
+emitting = false
+amount = 20
+lifetime = 0.5
+process_material = SubResource( 299 )
+
+[node name="Blue2Particles" type="Particles2D" parent="Runes/RuneR4"]
+emitting = false
+amount = 100
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 297 )
+
+[node name="DestroyParticles" type="Particles2D" parent="Runes/RuneR4"]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 300 )
+
+[node name="WrongParticles" type="Particles2D" parent="Runes/RuneR4"]
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 302 )
+
+[node name="AreaR4" type="Area2D" parent="Runes/RuneR4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Runes/RuneR4/AreaR4"]
+shape = SubResource( 115 )
+
+[node name="RuneR5" type="Sprite" parent="Runes"]
+position = Vector2( 223, 129 )
+texture = ExtResource( 14 )
+
+[node name="BlueParticles" type="Particles2D" parent="Runes/RuneR5"]
+emitting = false
+amount = 20
+lifetime = 0.5
+process_material = SubResource( 299 )
+
+[node name="Blue2Particles" type="Particles2D" parent="Runes/RuneR5"]
+emitting = false
+amount = 100
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 297 )
+
+[node name="DestroyParticles" type="Particles2D" parent="Runes/RuneR5"]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 300 )
+
+[node name="WrongParticles" type="Particles2D" parent="Runes/RuneR5"]
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 302 )
+
+[node name="AreaR5" type="Area2D" parent="Runes/RuneR5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Runes/RuneR5/AreaR5"]
+shape = SubResource( 115 )
+
+[node name="DestroyRune" type="Sprite" parent="Runes"]
+position = Vector2( 0, -35 )
+texture = ExtResource( 25 )
+
+[node name="DestroyParticles" type="Particles2D" parent="Runes/DestroyRune"]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 300 )
+
+[node name="DestroyRune2" type="Sprite" parent="Runes"]
+position = Vector2( 0, -35 )
+texture = ExtResource( 25 )
+
+[node name="DestroyParticles" type="Particles2D" parent="Runes/DestroyRune2"]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 300 )
+
+[node name="runeselect" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 64 )
+volume_db = -15.0
+bus = "SFX"
+
+[node name="runeselect2" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 65 )
+volume_db = -15.0
+bus = "SFX"
+
+[node name="runeselect3" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 66 )
+volume_db = -15.0
+bus = "SFX"
+
+[node name="runeselect4" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 62 )
+volume_db = -15.0
+bus = "SFX"
+
+[node name="runeselect5" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 61 )
+volume_db = -15.0
+bus = "SFX"
+
+[node name="runeselect6" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 63 )
+volume_db = -15.0
+bus = "SFX"
+
+[node name="death" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 67 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="buffsound" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 68 )
+volume_db = -15.0
+bus = "SFX"
+
+[node name="explosion1" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 69 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="explosion2" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 70 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="explosion3" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 71 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="explosion4" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 72 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="explosion5" type="AudioStreamPlayer" parent="Runes"]
+stream = ExtResource( 73 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="Rocks" type="Node2D" parent="."]
+position = Vector2( 0, 15 )
+script = ExtResource( 37 )
+
+[node name="RockR" type="Sprite" parent="Rocks"]
+position = Vector2( 425, 182 )
+texture = ExtResource( 17 )
+
+[node name="Right2D" type="Area2D" parent="Rocks/RockR"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocks/RockR/Right2D"]
+position = Vector2( -0.5, 3 )
+shape = SubResource( 303 )
+
+[node name="BloodParticles" type="Particles2D" parent="Rocks/RockR"]
+emitting = false
+amount = 5
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 103 )
+
+[node name="ExplodeParticles" type="Particles2D" parent="Rocks/RockR"]
+position = Vector2( 0, 8 )
+emitting = false
+amount = 100
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 104 )
+
+[node name="Sprite1" type="Sprite" parent="Rocks/RockR"]
+visible = false
+position = Vector2( -18, -18 )
+texture = SubResource( 607 )
+
+[node name="Sprite2" type="Sprite" parent="Rocks/RockR"]
+visible = false
+position = Vector2( 0, -18 )
+texture = SubResource( 608 )
+
+[node name="Sprite3" type="Sprite" parent="Rocks/RockR"]
+visible = false
+position = Vector2( 18, -18 )
+texture = SubResource( 609 )
+
+[node name="RockL" type="Sprite" parent="Rocks"]
+position = Vector2( -423, 182 )
+texture = ExtResource( 17 )
+
+[node name="Left2D" type="Area2D" parent="Rocks/RockL"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocks/RockL/Left2D"]
+position = Vector2( -0.5, 3 )
+shape = SubResource( 304 )
+
+[node name="BloodParticles" type="Particles2D" parent="Rocks/RockL"]
+emitting = false
+amount = 5
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 103 )
+
+[node name="ExplodeParticles" type="Particles2D" parent="Rocks/RockL"]
+position = Vector2( 0, 8 )
+emitting = false
+amount = 100
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource( 104 )
+
+[node name="Sprite1" type="Sprite" parent="Rocks/RockL"]
+visible = false
+position = Vector2( -18, -18 )
+texture = SubResource( 607 )
+
+[node name="Sprite2" type="Sprite" parent="Rocks/RockL"]
+visible = false
+position = Vector2( 0, -18 )
+texture = SubResource( 608 )
+
+[node name="Sprite3" type="Sprite" parent="Rocks/RockL"]
+visible = false
+position = Vector2( 18, -18 )
+texture = SubResource( 609 )
+
+[node name="xQcNO" type="AudioStreamPlayer" parent="Rocks"]
+stream = ExtResource( 16 )
+volume_db = -15.0
+bus = "SFX"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 545, 104 )
+shape = SubResource( 105 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -541, 104 )
+shape = SubResource( 106 )
+
+[node name="KillParticles" type="Particles2D" parent="."]
+material = SubResource( 157 )
+position = Vector2( 0, -100 )
+emitting = false
+amount = 500
+lifetime = 6.0
+one_shot = true
+process_material = SubResource( 160 )
+texture = ExtResource( 41 )
+
+[node name="explosion" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, 123.465 )
+frames = SubResource( 615 )
+animation = "explode"
+
+[node name="explosionaudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 35 )
+bus = "SFX"
+
+[node name="KillSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 45 )
+volume_db = -7.0
+pitch_scale = 0.8
+bus = "Music"
+
+[node name="BogParticles" type="Particles2D" parent="."]
+position = Vector2( 0, -100 )
+amount = 1500
+lifetime = 7.0
+process_material = SubResource( 173 )
+texture = ExtResource( 50 )
+
+[connection signal="timeout" from="Player/CoyoteTimer" to="Player" method="_on_CoyoteTimer_timeout"]
+[connection signal="animation_finished" from="CanvasLayer/Transition/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="finished" from="Music/Background1" to="Music" method="_on_Background1_finished"]
+[connection signal="finished" from="Music/Background2" to="Music" method="_on_Background2_finished"]
+[connection signal="body_entered" from="Boss/Peppah/Area2D" to="Boss/Peppah" method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Boss/Peppah/Timer" to="Boss/Peppah" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Boss/Peppah/ChargingTimer" to="Boss/Peppah" method="_on_ChargingTimer_timeout"]
+[connection signal="timeout" from="Boss/Nina/Timer0" to="Boss/Nina" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Boss/Nina/Timer1" to="Boss/Nina" method="_on_Timer1_timeout"]
+[connection signal="timeout" from="Boss/Nina/Timer2" to="Boss/Nina" method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Boss/Nina/Timer3" to="Boss/Nina" method="_on_Timer3_timeout"]
+[connection signal="timeout" from="Boss/Nina/Timer4" to="Boss/Nina" method="_on_Timer4_timeout"]
+[connection signal="timeout" from="Boss/Nina/HealingTimer" to="Boss/Peppah" method="_on_HealingTimer_timeout"]
+[connection signal="visibility_changed" from="Boss/Nina/HealingParticles" to="Runes" method="_on_HealingParticles_visibility_changed"]
+[connection signal="timeout" from="Boss/Nina/StunTimer" to="Boss/Nina" method="_on_StunTimer_timeout"]
+[connection signal="body_entered" from="Boss/Nina/HitArea2D" to="Boss/Nina" method="_on_HitArea2D_body_entered"]
+[connection signal="body_exited" from="Boss/Nina/HitArea2D" to="Boss/Nina" method="_on_HitArea2D_body_exited"]
+[connection signal="timeout" from="Boss/Nina/HitTimer" to="Boss/Nina" method="_on_HitTimer_timeout"]
+[connection signal="timeout" from="Boss/Nina/TooLongTimer" to="Boss/Peppah" method="_on_TooLongTimer_timeout"]
+[connection signal="timeout" from="Boss/Nina/WinTimer" to="Boss/Nina" method="_on_WinTimer_timeout"]
+[connection signal="timeout" from="Boss/Nina/WinTimerShort" to="Boss/Nina" method="_on_WinTimerShort_timeout"]
+[connection signal="body_entered" from="Boss/Arena" to="Boss/Nina" method="_on_Arena_body_entered"]
+[connection signal="body_exited" from="Boss/Arena" to="Boss/Nina" method="_on_Arena_body_exited"]
+[connection signal="body_entered" from="Runes/RuneL1/AreaL1" to="Runes" method="_on_AreaL1_body_entered"]
+[connection signal="body_entered" from="Runes/RuneL2/AreaL2" to="Runes" method="_on_AreaL2_body_entered"]
+[connection signal="body_entered" from="Runes/RuneL3/AreaL3" to="Runes" method="_on_AreaL3_body_entered"]
+[connection signal="body_entered" from="Runes/RuneL4/AreaL4" to="Runes" method="_on_AreaL4_body_entered"]
+[connection signal="body_entered" from="Runes/RuneL5/AreaL5" to="Runes" method="_on_AreaL5_body_entered"]
+[connection signal="body_entered" from="Runes/RuneR1/AreaR1" to="Runes" method="_on_AreaR1_body_entered"]
+[connection signal="body_entered" from="Runes/RuneR2/AreaR2" to="Runes" method="_on_AreaR2_body_entered"]
+[connection signal="body_entered" from="Runes/RuneR3/AreaR3" to="Runes" method="_on_AreaR3_body_entered"]
+[connection signal="body_entered" from="Runes/RuneR4/AreaR4" to="Runes" method="_on_AreaR4_body_entered"]
+[connection signal="body_entered" from="Runes/RuneR5/AreaR5" to="Runes" method="_on_AreaR5_body_entered"]
+[connection signal="body_entered" from="Rocks/RockR/Right2D" to="Rocks" method="_on_Right2D_body_entered"]
+[connection signal="body_entered" from="Rocks/RockL/Left2D" to="Rocks" method="_on_Left2D_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Rocks" method="_on_Area2D_body_entered"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Vaata.ogg-1fddf3cebdf8bd28e6fdad59d4bb3f4a.oggstr"
+
+[deps]
+
+source_file="res://assets/Songs/Vaata.ogg"
+dest_files=[ "res://.import/Vaata.ogg-1fddf3cebdf8bd28e6fdad59d4bb3f4a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

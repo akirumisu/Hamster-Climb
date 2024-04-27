@@ -1,0 +1,774 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/tres/menutheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/MenuScripts/Ending.gd" type="Script" id=3]
+[ext_resource path="res://assets/fonts/dynamicfontdata.tres" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/Songs/Metaruka - The End (Death Screen mix by Avgvst).ogg" type="AudioStream" id=5]
+[ext_resource path="res://assets/fonts/alagard.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("GridContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "fade"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GridContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "ForsencoreFade"
+length = 25.0
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("ForsencoreLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ForsencoreLabel:margin_top")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 4, 25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -60.0, -4096 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CreditsLabel:margin_top")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 4, 25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 600.0, -3200.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CreditsLabel2:margin_top")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 4, 25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 830.0, -2900.0 ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ForsencoreLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ForsencoreLabel:margin_top")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -60.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CreditsLabel:margin_top")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 600.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CreditsLabel2:margin_top")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2000.0 ]
+}
+
+[sub_resource type="DynamicFont" id=7]
+size = 200
+outline_size = 10
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 86
+outline_size = 7
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 128
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 86
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Ending" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseControl" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="PauseControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0.196078 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause1" type="ColorRect" parent="PauseControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -70.0
+margin_top = -80.0
+margin_right = -20.0
+margin_bottom = 80.0
+color = Color( 1, 1, 1, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause2" type="ColorRect" parent="PauseControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -80.0
+margin_right = 70.0
+margin_bottom = 80.0
+color = Color( 1, 1, 1, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+anims/RESET = SubResource( 5 )
+anims/fade = SubResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.196078, 0.196078, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Control" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsAnimationPlayer" type="AnimationPlayer" parent="Control/Credits"]
+anims/ForsencoreFade = SubResource( 8 )
+anims/RESET = SubResource( 9 )
+
+[node name="ForsencoreLabel" type="Label" parent="Control/Credits"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -664.0
+margin_top = -60.0
+margin_right = 664.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 7 )
+text = "Hamster Climb"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsLabel" type="Label" parent="Control/Credits"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -939.5
+margin_top = 600.0
+margin_right = 939.5
+margin_bottom = 974.5
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Made by akirumisu"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsLabel2" type="Label" parent="Control/Credits"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -797.0
+margin_top = 2000.0
+margin_right = -335.0
+margin_bottom = 1763.0
+rect_scale = Vector2( 3.5, 3.5 )
+text = "MUSIC:
+Main menu: g i g a w u f f l e r  - Spring Spring
+Level select: Next to You - Joth (Jordan)
+Mercury Processing Plant: Raxi Vågner iii - Spring Spring
+Mercury Processing Plant 2: Bopfriend - Spring Spring
+Amduat and Nehebkau: Egyptian Fortress Boss - Spring Spring
+Amduat and Nehebkau 2: Final Boss Song (Hojoh) - Señor Moreno 2020
+Duat: Dark Intro - Nikke
+Duat 2: Cave Theme - Brandon75689
+The Sun: Hold the Line (boss theme) - Bart Kelsey
+The Sun 2: Death of The Karma - FrozenStk
+Unknown: I swear I saw it - yd
+Unknown 2: Another space background track - yd
+Ouroboros: Boss 8 - Spring Spring
+Ouroboros 2: Symphony of Chaos Loop - Patrick Maney
+Extra: Noncorrected Sequence - Fluffclipse
+Boss killed: Vaata - Fupicat
+Ending: The End (Death Screen mix) - AVGVSTA
+
+BACKGROUNDS:
+Menu & Unknown & Extra: To-Fujita on Shadertoy (ported by snesmocha)
+Mercury Processing Plant: Pavel Kutejnikov
+Amduat and Nehebkau: Original by Hyptosis, modified by ElizaWy
+and Emcee Flesher. Source: https://opengameart.org/node/95520
+Duat 2: mrange on Shadertoy (ported by BFPenguin)
+Ouroboros: iVader
+
+OTHER:
+Menu Transition: Van Viet Hieu Anh
+God Rays: Peter Höglund
+Sun: SalemF
+Shaking Shader: CasualGarageCoder
+Particles: Raffaele Picca - raffaelepicca.com
+
+Made in Godot 3.4.2
+godotengine.org/license"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.13
+anchor_top = 0.035
+anchor_right = 0.13
+anchor_bottom = 0.037
+margin_left = 1.52588e-05
+margin_top = -22.8
+margin_right = 1429.0
+margin_bottom = 91.04
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ModeText" type="Label" parent="Control/HBoxContainer"]
+modulate = Color( 0.941176, 0.941176, 0.941176, 1 )
+margin_right = 841.0
+margin_bottom = 116.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Normal Mode"
+
+[node name="ModeLabel" type="Label" parent="Control/HBoxContainer"]
+modulate = Color( 0.941176, 0.941176, 0.941176, 1 )
+margin_left = 845.0
+margin_right = 1429.0
+margin_bottom = 116.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 4 )
+text = " Cleared"
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.1
+anchor_top = 0.16
+anchor_right = 0.599
+anchor_bottom = 0.5
+margin_top = -52.8
+margin_right = 599.92
+margin_bottom = 508.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_right = 1035.0
+margin_bottom = 78.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Time: "
+
+[node name="TimeStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_left = 1039.0
+margin_right = 1558.0
+margin_bottom = 78.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "00:00:00.000"
+
+[node name="AsylumTimeLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_top = 82.0
+margin_right = 1035.0
+margin_bottom = 136.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Mercury Processing Plant Time: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AsylumTimeStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_left = 1039.0
+margin_top = 82.0
+margin_right = 1558.0
+margin_bottom = 136.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "00:00:00.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AsylumBossTimeLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_top = 140.0
+margin_right = 1035.0
+margin_bottom = 194.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Amduat and Nehebkau Time: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AsylumBossTimeStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_left = 1039.0
+margin_top = 140.0
+margin_right = 1558.0
+margin_bottom = 194.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "00:00:00.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeebTimeLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_top = 198.0
+margin_right = 1035.0
+margin_bottom = 252.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Duat Time: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeebTimeStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_left = 1039.0
+margin_top = 198.0
+margin_right = 1558.0
+margin_bottom = 252.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "00:00:00.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeebBossTimeLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_top = 256.0
+margin_right = 1035.0
+margin_bottom = 310.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "The Sun Time: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeebBossTimeStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_left = 1039.0
+margin_top = 256.0
+margin_right = 1558.0
+margin_bottom = 310.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "00:00:00.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadmonqTimeLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_top = 314.0
+margin_right = 1035.0
+margin_bottom = 368.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Unknown Time: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadmonqTimeStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_left = 1039.0
+margin_top = 314.0
+margin_right = 1558.0
+margin_bottom = 368.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "00:00:00.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadmonqBossTimeLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_top = 372.0
+margin_right = 1035.0
+margin_bottom = 426.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Ouroboros Time: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadmonqBossTimeStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_left = 1039.0
+margin_top = 372.0
+margin_right = 1558.0
+margin_bottom = 426.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "00:00:00.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeathsLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_top = 430.0
+margin_right = 1035.0
+margin_bottom = 508.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Deaths: "
+
+[node name="DeathsStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_left = 1039.0
+margin_top = 430.0
+margin_right = 1558.0
+margin_bottom = 508.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
+[node name="NinaDeathsLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_top = 512.0
+margin_right = 1035.0
+margin_bottom = 566.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Amduat and Nehebkau Deaths: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinaDeathsStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_left = 1039.0
+margin_top = 512.0
+margin_right = 1558.0
+margin_bottom = 566.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="xQcDeathsLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_top = 570.0
+margin_right = 1035.0
+margin_bottom = 624.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "The Sun Deaths: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="xQcDeathsStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_left = 1039.0
+margin_top = 570.0
+margin_right = 1558.0
+margin_bottom = 624.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ForsenDeathsLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_top = 628.0
+margin_right = 1035.0
+margin_bottom = 682.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Ouroboros Deaths: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ForsenDeathsStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+margin_left = 1039.0
+margin_top = 628.0
+margin_right = 1558.0
+margin_bottom = 682.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HorsesLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_top = 686.0
+margin_right = 1035.0
+margin_bottom = 764.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Bamboo: "
+
+[node name="HorsesStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_left = 1039.0
+margin_top = 686.0
+margin_right = 1558.0
+margin_bottom = 764.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
+[node name="SecretLabel" type="Label" parent="Control/GridContainer"]
+visible = false
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_top = 768.0
+margin_right = 1035.0
+margin_bottom = 846.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Secret Record:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SecretStat" type="Label" parent="Control/GridContainer"]
+visible = false
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_left = 1039.0
+margin_top = 768.0
+margin_right = 1558.0
+margin_bottom = 846.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "00:00:00.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CompletionLabel" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_top = 768.0
+margin_right = 1035.0
+margin_bottom = 846.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Completion: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CompletionStat" type="Label" parent="Control/GridContainer"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+margin_left = 1039.0
+margin_top = 768.0
+margin_right = 1558.0
+margin_bottom = 846.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "0%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitLabel" type="Label" parent="Control"]
+modulate = Color( 0.784314, 0.470588, 0.235294, 0 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -470.5
+margin_top = -110.0
+margin_right = 470.5
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitTimer" type="Timer" parent="Control"]
+wait_time = 5.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -5.0
+bus = "Music"
+
+[connection signal="animation_finished" from="Control/Credits/CreditsAnimationPlayer" to="." method="_on_CreditsAnimationPlayer_animation_finished"]
+[connection signal="timeout" from="Control/ExitTimer" to="." method="_on_ExitTimer_timeout"]

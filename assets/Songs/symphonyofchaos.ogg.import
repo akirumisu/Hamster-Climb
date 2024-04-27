@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/symphonyofchaos.ogg-d3412e35ffea3ccb9a7ea55b252a977b.oggstr"
+
+[deps]
+
+source_file="res://assets/Songs/symphonyofchaos.ogg"
+dest_files=[ "res://.import/symphonyofchaos.ogg-d3412e35ffea3ccb9a7ea55b252a977b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

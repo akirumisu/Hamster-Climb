@@ -1,0 +1,488 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://assets/tres/menutheme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/menu/stageicon1.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/MenuScripts/LevelSelect.gd" type="Script" id=3]
+[ext_resource path="res://assets/menu/exitbox.png" type="Texture" id=4]
+[ext_resource path="res://assets/tres/levelselecttheme.tres" type="Theme" id=5]
+[ext_resource path="res://assets/fonts/dynamicfontdata.tres" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/Songs/Next_to_You.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/menu/stageicon2.png" type="Texture" id=8]
+[ext_resource path="res://assets/menu/stageicon3.png" type="Texture" id=9]
+[ext_resource path="res://assets/menu/stageicon7.png" type="Texture" id=10]
+[ext_resource path="res://assets/menu/stageicon4.png" type="Texture" id=11]
+[ext_resource path="res://assets/menu/stageicon5.png" type="Texture" id=12]
+[ext_resource path="res://assets/menu/stageicon6.png" type="Texture" id=13]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="Theme" id=5]
+PanelContainer/styles/panel = SubResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 33
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 96
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[node name="LevelSelect" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.196078, 0.196078, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -480.0
+margin_right = 325.0
+margin_bottom = 370.0
+rect_clip_content = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="GridContainer"]
+margin_right = 197.0
+margin_bottom = 197.0
+rect_scale = Vector2( 4, 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer2" type="PanelContainer" parent="GridContainer/Control"]
+margin_left = 59.0
+margin_top = 99.75
+margin_right = 96.0
+margin_bottom = 107.75
+theme = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer3" type="PanelContainer" parent="GridContainer/Control"]
+margin_left = 59.0
+margin_top = 152.5
+margin_right = 96.0
+margin_bottom = 160.5
+theme = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer4" type="PanelContainer" parent="GridContainer/Control"]
+margin_left = 99.75
+margin_top = 164.25
+margin_right = 107.75
+margin_bottom = 201.25
+theme = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer6" type="PanelContainer" parent="GridContainer/Control"]
+margin_left = 47.0
+margin_top = 164.25
+margin_right = 55.0
+margin_bottom = 201.25
+theme = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer5" type="PanelContainer" parent="GridContainer/Control"]
+margin_left = 99.75
+margin_top = 111.5
+margin_right = 107.75
+margin_bottom = 148.5
+theme = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer7" type="PanelContainer" parent="GridContainer/Control"]
+margin_left = 99.75
+margin_top = 58.75
+margin_right = 107.75
+margin_bottom = 95.75
+theme = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer8" type="PanelContainer" parent="GridContainer/Control"]
+margin_left = 47.0
+margin_top = 58.75
+margin_right = 55.0
+margin_bottom = 95.75
+theme = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SecretBoss" type="TextureRect" parent="GridContainer"]
+margin_top = 211.0
+margin_right = 197.0
+margin_bottom = 408.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="XQCbutton" type="Button" parent="GridContainer/SecretBoss"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_neighbour_left = NodePath("../../MadmonqRealmBoss/MadmonqRealmBossButton")
+focus_neighbour_top = NodePath("../../Exit/Button")
+focus_neighbour_bottom = NodePath("../../Exit/Button")
+theme = ExtResource( 5 )
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GridContainer/SecretBoss"]
+margin_left = 15.0
+margin_top = 100.0
+margin_right = 40.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Required:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="GridContainer/SecretBoss"]
+margin_left = 140.0
+margin_top = 100.0
+margin_right = 40.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "0/9"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="GridContainer/SecretBoss"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -77.0
+margin_top = -30.0
+margin_right = 77.0
+margin_bottom = 30.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.941176, 0.941176, 0.941176, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "00:00.000"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadmonqRealm" type="TextureRect" parent="GridContainer"]
+margin_left = 211.0
+margin_top = 211.0
+margin_right = 408.0
+margin_bottom = 408.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadmonqRealmButton" type="Button" parent="GridContainer/MadmonqRealm"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_neighbour_top = NodePath("../../Asylum/AsylumButton")
+theme = ExtResource( 5 )
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GridContainer/MadmonqRealm"]
+visible = false
+margin_left = 5.0
+margin_top = 175.0
+margin_right = 40.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Bamboo:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="GridContainer/MadmonqRealm"]
+visible = false
+margin_left = 100.0
+margin_top = 175.0
+margin_right = 40.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 6 )
+text = "0/3"
+
+[node name="MadmonqRealmBoss" type="TextureRect" parent="GridContainer"]
+margin_left = 422.0
+margin_top = 211.0
+margin_right = 619.0
+margin_bottom = 408.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadmonqRealmBossButton" type="Button" parent="GridContainer/MadmonqRealmBoss"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_neighbour_top = NodePath("../../AsylumBoss/AsylumBossButton")
+focus_neighbour_right = NodePath("../../SecretBoss/XQCbutton")
+theme = ExtResource( 5 )
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeebZone" type="TextureRect" parent="GridContainer"]
+margin_left = 211.0
+margin_top = 422.0
+margin_right = 408.0
+margin_bottom = 619.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeebZoneButton" type="Button" parent="GridContainer/WeebZone"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_neighbour_left = NodePath("../../WeebZoneBoss/WeebZoneBossButton")
+theme = ExtResource( 5 )
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GridContainer/WeebZone"]
+visible = false
+margin_left = 5.0
+margin_top = 175.0
+margin_right = 40.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Bamboo:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="GridContainer/WeebZone"]
+visible = false
+margin_left = 100.0
+margin_top = 175.0
+margin_right = 40.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 6 )
+text = "0/3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeebZoneBoss" type="TextureRect" parent="GridContainer"]
+margin_left = 422.0
+margin_top = 422.0
+margin_right = 619.0
+margin_bottom = 619.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeebZoneBossButton" type="Button" parent="GridContainer/WeebZoneBoss"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_neighbour_right = NodePath("../../WeebZone/WeebZoneButton")
+theme = ExtResource( 5 )
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="TextureRect" parent="GridContainer"]
+margin_top = 633.0
+margin_right = 197.0
+margin_bottom = 830.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="GridContainer/Exit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_neighbour_left = NodePath("../../AsylumBoss/AsylumBossButton")
+focus_neighbour_top = NodePath("../../SecretBoss/XQCbutton")
+focus_neighbour_bottom = NodePath("../../SecretBoss/XQCbutton")
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Asylum" type="TextureRect" parent="GridContainer"]
+margin_left = 211.0
+margin_top = 633.0
+margin_right = 408.0
+margin_bottom = 830.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AsylumButton" type="Button" parent="GridContainer/Asylum"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_neighbour_bottom = NodePath("../../MadmonqRealm/MadmonqRealmButton")
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GridContainer/Asylum"]
+margin_left = 5.0
+margin_top = 175.0
+margin_right = 40.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Bamboo:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="GridContainer/Asylum"]
+margin_left = 100.0
+margin_top = 175.0
+margin_right = 40.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 6 )
+text = "0/3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AsylumBoss" type="TextureRect" parent="GridContainer"]
+margin_left = 422.0
+margin_top = 633.0
+margin_right = 619.0
+margin_bottom = 830.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AsylumBossButton" type="Button" parent="GridContainer/AsylumBoss"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_neighbour_right = NodePath("../../Exit/Button")
+focus_neighbour_bottom = NodePath("../../MadmonqRealmBoss/MadmonqRealmBossButton")
+theme = ExtResource( 5 )
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelSelect" type="Label" parent="."]
+anchor_right = 1.0
+margin_left = 40.0
+margin_top = 10.0
+margin_bottom = 23.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Level Select"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="levelselectMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -5.0
+autoplay = true
+bus = "Music"
+
+[connection signal="pressed" from="GridContainer/SecretBoss/XQCbutton" to="." method="_on_XQCbutton_pressed"]
+[connection signal="pressed" from="GridContainer/MadmonqRealm/MadmonqRealmButton" to="." method="_on_MadmonqRealmButton_pressed"]
+[connection signal="pressed" from="GridContainer/MadmonqRealmBoss/MadmonqRealmBossButton" to="." method="_on_MadmonqRealmBossButton_pressed"]
+[connection signal="pressed" from="GridContainer/WeebZone/WeebZoneButton" to="." method="_on_WeebZoneButton_pressed"]
+[connection signal="pressed" from="GridContainer/WeebZoneBoss/WeebZoneBossButton" to="." method="_on_WeebZoneBossButton_pressed"]
+[connection signal="pressed" from="GridContainer/Exit/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="GridContainer/Asylum/AsylumButton" to="." method="_on_AsylumButton_pressed"]
+[connection signal="pressed" from="GridContainer/AsylumBoss/AsylumBossButton" to="." method="_on_AsylumBossButton_pressed"]

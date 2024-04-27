@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sunattack3.wav-6f9fed2c06bb0192e9cff38c5e1e5acd.sample"
+
+[deps]
+
+source_file="res://assets/SFX/sunattack3.wav"
+dest_files=[ "res://.import/sunattack3.wav-6f9fed2c06bb0192e9cff38c5e1e5acd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
