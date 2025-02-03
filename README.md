@@ -1,5 +1,7 @@
 # Hamster-Climb
-A game made in Godot3. 5,433 Views & 292 Downloads. Link: https://akirumisu.itch.io/hamsterclimb
+A game made in Godot3
+5,433 Views & 292 Downloads
+Link: https://akirumisu.itch.io/hamsterclimb
 
 Published: May 23, 2023
 
